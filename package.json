@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "homepage": "https://kevinsctfries.github.io/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build",
     "dev": "vite",
