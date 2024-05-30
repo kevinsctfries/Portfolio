@@ -1,12 +1,13 @@
 header {
+  box-shadow: 0 1px 0 0 black;
   display: flex;
   justify-content: flex-end;
-  gap: 25px;
+  gap: 2rem;
   align-items: center;
-  height: 50px;
-  margin-right: 25px;
+  height: 5vh;
   a {
     color: black;
+    margin-right: 1.5rem;
   }
   a:link {
     text-decoration: none;
@@ -24,4 +25,12 @@ header {
 
 .active {
   color: #749bc2;
+  border-bottom: 1px solid #4682a9;
+}
+
+@media only screen and (max-width: 960px) {
+  header {
+    justify-content: center;
+    margin-right: 0px;
+  }
 }

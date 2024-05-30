@@ -8,7 +8,8 @@ const HomePage = () => {
       <span>
         my name is <span className="name">Kevin Fries</span>,
       </span>
-      <h4>and I am a web developer</h4>
+      <br />
+      <span>I am a web developer</span>
       <br />
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
