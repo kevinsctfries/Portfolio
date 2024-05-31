@@ -43,3 +43,9 @@ main {
 main.animate {
   animation: bg 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
 }
+
+@media only screen and (max-width: 960px) {
+  main {
+    width: 80%;
+  }
+}
