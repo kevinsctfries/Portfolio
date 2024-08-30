@@ -10,7 +10,7 @@
 
 p {
   font-size: 1.5rem;
-  margin: 1rem;
+  text-align: center;
 }
 
 @media only screen and (max-width: 960px) {

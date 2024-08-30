@@ -11,12 +11,7 @@ const HomePage = () => {
       <br />
       <span>I am a web developer</span>
       <br />
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
-        facilis dolorem explicabo cumque minima. Dolor quod tenetur non illum
-        placeat ea nobis? Nesciunt molestiae obcaecati enim, autem eligendi iste
-        eius!
-      </p>
+      <p>I enjoy making websites!</p>
     </div>
   );
 };

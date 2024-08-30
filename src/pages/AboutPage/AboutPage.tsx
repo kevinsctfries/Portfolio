@@ -3,10 +3,23 @@ import "./aboutpage.css";
 const AboutPage = () => {
   return (
     <div className="about">
-      <span>about me,</span>
-      <p>My name is Kevin Fries, and I'm a web developer.</p>
-      <p>I'm born and raised in California, but now live in North Carolina.</p>
-      <p>I have a strong passion for coding, especially for web development.</p>
+      <section className="aboutSection">
+        <span>about me</span>
+        <p>
+          My name is <span className="name">Kevin Fries</span>, and I'm a web
+          developer.
+        </p>
+      </section>
+      <section className="skillSection">
+        <span>my skills</span>
+        <ul>
+          <li>HTML & CSS</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>Node</li>
+          <li>Popular frameworks, such as React, Angular, and Vue</li>
+        </ul>
+      </section>
     </div>
   );
 };

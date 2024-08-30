@@ -3,7 +3,6 @@ body {
   margin: 0;
   padding: 0;
 
-  /* global */
   --primary-page-bg: #f6f4eb;
   --alt-page-bg: #eeead9;
   --text-color: black;
@@ -18,7 +17,6 @@ body {
 }
 
 body.darkmode {
-  /* global */
   --primary-page-bg: #191919;
   --alt-page-bg: #323232;
   --text-color: white;
@@ -89,6 +87,10 @@ main {
 
 main.animate {
   animation: bg 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
+}
+
+.WIP {
+  font-size: 1rem;
 }
 
 @media only screen and (max-width: 960px) {
