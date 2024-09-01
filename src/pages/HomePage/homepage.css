@@ -15,8 +15,6 @@
 
 .skills ul {
   list-style-type: none;
-  /* margin: 0; */
-  /* padding: 0; */
   padding: 0 0 0.5rem 0;
   margin: 0 0 0.5rem 0;
 }
@@ -27,7 +25,11 @@
 }
 
 @media only screen and (max-width: 960px) {
-  .home {
-    font-size: 1.5rem;
+  .section p {
+    font-size: 1.25rem;
+  }
+
+  .skills ul {
+    font-size: 1.25rem;
   }
 }
