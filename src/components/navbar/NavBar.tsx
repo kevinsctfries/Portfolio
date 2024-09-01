@@ -26,15 +26,13 @@ const NavBar = () => {
   return (
     <header>
       <NavLink to="/">home</NavLink>
-      <NavLink to="/about">about</NavLink>
       <NavLink to="/projects">projects</NavLink>
       <NavLink to="/contact">contact</NavLink>
       <IconButton
         disableRipple={true}
         size={"small"}
         id="darkmodeBtn"
-        onClick={() => setDarkMode((prev) => !prev)}
-      >
+        onClick={() => setDarkMode(prev => !prev)}>
         {darkMode ? <LightModeOutlinedIcon /> : <NightlightOutlinedIcon />}
       </IconButton>
     </header>

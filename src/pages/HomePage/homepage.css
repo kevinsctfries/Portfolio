@@ -1,16 +1,27 @@
-.home {
-  font-size: 2rem;
-  font-weight: 200;
+.skillsTable {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.name {
-  color: var(--alt-text-color);
-  font-weight: 300;
+.skills {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  align-items: center;
 }
 
-p {
-  font-size: 1.5rem;
-  text-align: center;
+.skills ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills span {
+  border-bottom: 1px solid var(--border-color);
+  margin: 1rem 0 1rem 0;
 }
 
 @media only screen and (max-width: 960px) {
