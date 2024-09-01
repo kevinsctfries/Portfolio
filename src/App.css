@@ -5,8 +5,8 @@ body {
   font-size: 2rem;
   font-weight: 200;
 
-  --primary-page-bg: #f6f4eb;
-  --alt-page-bg: #eeead9;
+  --primary-page-bg: white;
+  --alt-page-bg: #white;
   --text-color: black;
   --alt-text-color: #4682a9;
   --border-color: black;
@@ -37,7 +37,17 @@ body.darkmode {
 .section {
   padding: 1rem;
   margin: 1rem;
+  background-color: var(--primary-page-bg);
   border: 1px solid var(--border-color);
+}
+
+.section:hover {
+  /* padding: 0; */
+  transform: scale(1.05);
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .name {
@@ -104,10 +114,6 @@ main {
 
 main.animate {
   animation: bg 1.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
-}
-
-.WIP {
-  font-size: 1rem;
 }
 
 @media only screen and (max-width: 960px) {

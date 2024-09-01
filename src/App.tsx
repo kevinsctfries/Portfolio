@@ -25,9 +25,6 @@ function App() {
         <main className={animate ? "animate" : ""}>
           <Outlet />
         </main>
-        <p className="WIP">
-          This website is a work in progress, please don't judge
-        </p>
       </div>
     </>
   );

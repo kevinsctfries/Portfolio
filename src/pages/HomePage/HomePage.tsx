@@ -47,7 +47,22 @@ const HomePage = () => {
         <span>about me,</span>
         <p>
           Like many other web developers, I discovered my passion for it on
-          sites like Neopets and MySpace.
+          sites like Neopets and MySpace. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Accusamus inventore iste libero atque ducimus
+          laboriosam. Vel reiciendis, totam nemo nesciunt, harum ut ipsa
+          deserunt veniam est nobis eius quidem voluptas.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut
+          voluptate, fugiat sapiente aperiam quod fugit atque odio aliquam nisi
+          autem illo similique repellendus corrupti! Harum nostrum enim libero a
+          aliquid.
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est minus
+          perspiciatis illo odio, cupiditate reiciendis officia at fugit
+          voluptates amet eveniet sint eum dolore facilis, aliquam inventore
+          rem. Suscipit, velit.
         </p>
       </section>
     </div>
