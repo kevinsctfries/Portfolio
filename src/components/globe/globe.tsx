@@ -1,16 +1,10 @@
 import { useEffect, useRef } from "react";
 import Globe from "react-globe.gl";
+import type { GlobeMethods } from "react-globe.gl";
 import "./globe.css";
 
-type GlobeInstance = {
-  controls: () => {
-    autoRotate: boolean;
-    autoRotateSpeed: number;
-  };
-};
-
 const GlobeComponent = () => {
-  const globeEl = useRef<GlobeInstance | null>(null);
+  const globeEl = useRef<GlobeMethods | undefined>(undefined);
 
   useEffect(() => {
     if (globeEl.current) {
