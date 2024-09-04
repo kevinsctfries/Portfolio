@@ -3,7 +3,11 @@ name: Deploy
 on:
   push:
     branches:
-      - gh-pages
+      - main
+
+permissions:
+  id-token: write
+  contents: write
 
 jobs:
   build:
