@@ -2,7 +2,6 @@ import { Outlet, useLocation } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/navbar/NavBar";
 import { useEffect, useState } from "react";
-// import "./components/globe/globe.js";
 import GlobeComponent from "./components/globe/globe.tsx";
 
 function App() {
@@ -29,15 +28,21 @@ function App() {
             <Outlet />
           </main>
           <main className="content">
-            <GlobeComponent />
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat
-              amet adipisci vel autem minus odio unde labore. Minus libero
-              dolores nobis eius mollitia sapiente expedita, modi animi id a
-              iure?
+              I'M STILL WORKING ON THIS SITE. UNDER CONSTRUCTION. PLEASE DON'T
+              JUDGE!
+            </p>
+            <p>
+              I'M STILL WORKING ON THIS SITE. UNDER CONSTRUCTION. PLEASE DON'T
+              JUDGE!
+            </p>
+            <p>
+              I'M STILL WORKING ON THIS SITE. UNDER CONSTRUCTION. PLEASE DON'T
+              JUDGE!
             </p>
           </main>
         </div>
+        <GlobeComponent />
       </div>
     </>
   );

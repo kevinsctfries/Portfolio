@@ -46,11 +46,10 @@ const HomePage = () => {
       <section className="section">
         <span>about me,</span>
         <p>
-          Like many other web developers, I discovered my passion for it on
-          sites like Neopets and MySpace. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Accusamus inventore iste libero atque ducimus
-          laboriosam. Vel reiciendis, totam nemo nesciunt, harum ut ipsa
-          deserunt veniam est nobis eius quidem voluptas.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+          inventore iste libero atque ducimus laboriosam. Vel reiciendis, totam
+          nemo nesciunt, harum ut ipsa deserunt veniam est nobis eius quidem
+          voluptas.
         </p>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut

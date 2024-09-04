@@ -1,33 +1,33 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import Globe from "react-globe.gl";
 import "./globe.css";
 
-const GlobeComponent: React.FC = () => {
-  const [size, setSize] = useState({ width: 700, height: 700 });
-
-  const updateSize = () => {
-    // const newWidth = window.innerWidth * 0.5;
-    // const newHeight = window.innerHeight * 0.5;
-    const newWidth = window.innerWidth * 0.6;
-    const newHeight = window.innerHeight * 0.6;
-    setSize({ width: newWidth, height: newHeight });
+type GlobeInstance = {
+  controls: () => {
+    autoRotate: boolean;
+    autoRotateSpeed: number;
   };
+};
+
+const GlobeComponent = () => {
+  const globeEl = useRef<GlobeInstance | null>(null);
 
   useEffect(() => {
-    updateSize(); // Set size initially
-    window.addEventListener("resize", updateSize); // Update size on resize
-    return () => window.removeEventListener("resize", updateSize); // Cleanup listener
+    if (globeEl.current) {
+      const globe = globeEl.current;
+
+      globe.controls().autoRotate = true;
+      globe.controls().autoRotateSpeed = -0.35;
+    }
   }, []);
 
   return (
     <div className="globeContainer">
       <Globe
+        ref={globeEl} // Pass the ref to the Globe component
         globeImageUrl="https://unpkg.com/three-globe@2.31.1/example/img/earth-night.jpg"
-        backgroundImageUrl="https://upload.wikimedia.org/wikipedia/commons/8/89/HD_transparent_picture.png"
-        backgroundColor="black"
-        showAtmosphere={false}
-        width={size.width}
-        height={size.height}
+        backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
+        showAtmosphere={true}
       />
     </div>
   );

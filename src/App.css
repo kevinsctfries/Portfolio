@@ -6,6 +6,7 @@ body {
   font-weight: 200;
 
   --primary-page-bg: #fffef8;
+  --alt-page-bg: #fffef8;
   --text-color: black;
   --alt-text-color: #4682a9;
   --border-color: black;
@@ -24,9 +25,7 @@ body.darkmode {
   --primary-page-bg: #191919;
   --alt-page-bg: #323232;
   --text-color: white;
-  --nav-active-color: #e38421;
-  --alt-text-color: #e69138;
-  --border-color: #e69138;
+  --border-color: #fffef8;
 
   color: var(--text-color);
   background-color: var(--primary-page-bg);
@@ -116,6 +115,8 @@ main.animate {
 }
 
 .content {
+  text-align: center;
+  font-weight: 800;
   display: flex;
   flex-direction: column;
   flex-basis: 100%;
