@@ -19,11 +19,17 @@ body {
   -moz-transition: all 0.1s linear;
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }
 
 body.darkmode {
   --primary-page-bg: #191919;
-  --alt-page-bg: #323232;
+  --alt-page-bg: rgba(25, 25, 25, 0.5);
   --text-color: white;
   --border-color: #fffef8;
 
@@ -107,7 +113,6 @@ main {
   background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
   background-position: 0 0, 100% 0, 100% 100%, 0 100%;
   width: 30%;
-  box-shadow: 0px 10px 10px -4px rgba(0, 0, 0, 0.1);
 }
 
 main.animate {
