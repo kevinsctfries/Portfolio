@@ -1,5 +1,4 @@
 .contact {
-  font-size: 2rem;
   font-weight: 200;
   width: 50%;
   margin-left: auto;
@@ -19,5 +18,11 @@
     text-decoration: none;
     color: var(--alt-text-color);
     border-bottom: 1px solid;
+  }
+}
+
+@media only screen and (max-width: 60em) {
+  .contact {
+    width: 95%;
   }
 }
