@@ -59,8 +59,8 @@ const HomePage = () => {
       <div className="section">
         <h2>about me,</h2>
         <p>
-          I am a web developer based in the Raleigh, NC area. Web development
-          and backend services have been a hobby of mine for my whole life.
+          I am a web developer based in the Raleigh, NC area. Need to write more
+          here.
         </p>
       </div>
     </div>
