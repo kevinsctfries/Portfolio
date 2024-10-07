@@ -17,6 +17,7 @@ Welcome to my portfolio site! I built this to showcase the skills and knowledge 
 - **JavaScript (React)** - For building interactive user interfaces.
 - **TypeScript** - For type safety and better code maintainability.
 - **SCSS** - For more manageable and modular CSS.
+- **HashRouter** - To allow the functionality of BrowserRouter in gh-pages
 
 ## Features
 
