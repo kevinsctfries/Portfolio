@@ -1,15 +1,18 @@
 .contact {
   font-size: 2rem;
   font-weight: 200;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
-ul {
+.contact-info {
   font-size: 1.5rem;
 
   li {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 1rem;
   }
 
   a {

@@ -1,69 +1,68 @@
 import "./homepage.css";
 
 const HomePage = () => {
+  const frontEndSkills = [
+    "HTML",
+    "CSS, SASS, SCSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Angular",
+    "Redux",
+  ];
+
+  const backEndSkills = ["MySQL", "MongoDB", "Express", "Node.js", "Redis"];
+
+  const otherSkills = [
+    "Version control systems, such as Git",
+    "Experience with CI/CD pipelines",
+  ];
+
   return (
-    <div>
-      <section className="section">
-        <span>hello,</span>
+    <div className="home-content">
+      <div className="section">
+        <h2>hello,</h2>
         <p>
-          My name is <span className="name">Kevin Fries</span>. I'm a web
-          developer, and making websites that are simple and clean is my passion
+          My name is <span className="name">Kevin Fries</span>, and I like
+          making websites!
         </p>
-      </section>
-      <section className="section">
-        <span>my skills,</span>
+      </div>
+      <div className="section">
+        <h2>my skills,</h2>
         <div className="skillsTable">
-          <section className="skills">
-            <span>Front End</span>
+          <div className="skills">
+            <h2>Front End</h2>
             <ul>
-              <li>HTML</li>
-              <li>CSS, SASS, SCSS</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>React</li>
-              <li>Angular</li>
-              <li>Redux</li>
+              {frontEndSkills.map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
             </ul>
-          </section>
-          <section className="skills">
-            <span>Back End</span>
+          </div>
+          <div className="skills">
+            <h2>Back End</h2>
             <ul>
-              <li>SQL</li>
-              <li>MongoDB</li>
-              <li>Express</li>
-              <li>Node.js</li>
+              {backEndSkills.map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
             </ul>
-          </section>
+          </div>
         </div>
-        <section className="skills">
-          <span>Other Skills</span>
+        <div className="skills">
+          <h2>Other Skills</h2>
           <ul>
-            <li>Version control systems, such as Git</li>
-            <li>Experience with CI/CD pipelines</li>
+            {otherSkills.map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
           </ul>
-        </section>
-      </section>
-      <section className="section">
-        <span>about me,</span>
+        </div>
+      </div>
+      <div className="section">
+        <h2>about me,</h2>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-          inventore iste libero atque ducimus laboriosam. Vel reiciendis, totam
-          nemo nesciunt, harum ut ipsa deserunt veniam est nobis eius quidem
-          voluptas.
+          I am a web developer based in the Raleigh, NC area. Web development
+          and backend services have been a hobby of mine for my whole life.
         </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut
-          voluptate, fugiat sapiente aperiam quod fugit atque odio aliquam nisi
-          autem illo similique repellendus corrupti! Harum nostrum enim libero a
-          aliquid.
-        </p>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est minus
-          perspiciatis illo odio, cupiditate reiciendis officia at fugit
-          voluptates amet eveniet sint eum dolore facilis, aliquam inventore
-          rem. Suscipit, velit.
-        </p>
-      </section>
+      </div>
     </div>
   );
 };
