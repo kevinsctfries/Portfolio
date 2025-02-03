@@ -1,4 +1,11 @@
-.project-content {
+/*
+====================================
+= PROJECTS PAGE STYLES
+====================================
+*/
+
+/* Layout & Container */
+.projects-container {
   width: 75%;
   margin: auto;
   display: flex;
@@ -6,6 +13,7 @@
   gap: 1rem;
 }
 
+/* Project Items */
 .project-item {
   display: flex;
   flex-direction: column;
@@ -20,26 +28,30 @@
   font-weight: 400;
 }
 
-.text-and-image {
+.project-item:nth-child(even) h2 {
+  justify-content: flex-start;
+}
+
+/* Project Content (Text & Image) */
+.project-content {
   display: flex;
   align-items: center;
   flex-direction: row;
   border-left: 1px solid var(--border-color);
   margin-bottom: 2rem;
+  padding: 1rem;
+  gap: 2rem;
 }
 
-.project-item:nth-child(even) .text-and-image {
+.project-item:nth-child(even) .project-content {
   flex-direction: row-reverse;
   border-right: 1px solid var(--border-color);
   border-left: none;
 }
 
-.project-item:nth-child(even) h2 {
-  justify-content: start;
-}
-
-.projectImage {
-  max-width: 40%;
+/* Project Image */
+.project-image {
+  max-width: 25%;
   margin-left: 1rem;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -47,30 +59,24 @@
   border-radius: 10px;
 }
 
-.project-item p {
-  flex: 1;
-  margin: 1rem;
-  padding: 1rem;
-}
-
+/* Project Links */
 .project-links {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 0 3rem;
 }
 
-.project-links a {
-  text-decoration: none;
+.project-link {
   color: inherit;
-  border-bottom: 1px solid var(--text-color);
-  padding: 0 1rem 0 1rem;
+  text-decoration: none;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 0.25rem 1rem;
 }
 
-.project-item .project-links {
-  gap: 5rem;
-}
-
+/* Responsive Design */
 @media only screen and (max-width: 768px) {
-  .project-content {
+  .projects-container {
     font-size: 1.5rem;
     width: 95%;
     padding: 0.5rem;
@@ -80,11 +86,11 @@
     flex-direction: column;
   }
 
-  .text-and-image {
+  .project-content {
     flex-direction: column;
   }
 
-  .project-item:nth-child(even) .text-and-image {
+  .project-item:nth-child(even) .project-content {
     flex-direction: column;
   }
 
