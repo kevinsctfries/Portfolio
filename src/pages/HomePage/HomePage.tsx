@@ -22,7 +22,7 @@ const HomePage = () => {
     <>
       <div className="home-content">
         <div className="section">
-          <h2>hello,</h2>
+          <h1>hello,</h1>
           <p>
             My name is <span>Kevin Fries</span>, and I like making websites! I
             am passionate about building user-friendly, responsive, and
