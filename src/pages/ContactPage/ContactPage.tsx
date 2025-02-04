@@ -4,7 +4,7 @@ const ContactPage = () => {
   return (
     <>
       <div className="contact">
-        <h2>contact me</h2>
+        <h1>contact me</h1>
         <ul className="contact-info">
           <li>kevinsctfries@gmail.com</li>
           <li>

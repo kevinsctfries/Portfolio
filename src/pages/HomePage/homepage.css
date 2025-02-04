@@ -39,18 +39,7 @@
 
 @media only screen and (max-width: 60em) {
   .home-content {
-    font-size: 3.5vw;
     width: 95%;
     padding: 0.5rem;
-  }
-
-  .skills ul {
-    font-size: 3vw;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  h2 {
-    font-size: 4vw;
   }
 }

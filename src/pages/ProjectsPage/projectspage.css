@@ -73,15 +73,17 @@
 /* Responsive Design */
 @media only screen and (max-width: 60em) {
   .projects-container {
-    font-size: 3vw;
     width: 95%;
     padding: 0.5rem;
+  }
+
+  p {
+    margin: 0;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .projects-container {
-    font-size: 3.5vw;
     width: 95%;
     padding: 0.5rem;
   }
