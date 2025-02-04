@@ -8,6 +8,7 @@
 
 .contact-info {
   font-size: 1.5rem;
+  padding: 0;
 
   li {
     list-style-type: none;
