@@ -6,18 +6,12 @@
 
 /* Contact Container */
 .contact {
+  margin-top: 4rem;
   font-weight: 200;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  overflow: hidden;
 }
 
 /* Contact Info */
