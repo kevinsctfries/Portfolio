@@ -1,17 +1,40 @@
-/* index.css - Global Theme Styles */
-
 body {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 1.5rem;
   font-weight: 200;
-
-  background-color: var(--primary-page-bg);
-  color: var(--text-color);
   transition: background-color 0.1s linear, color 0.1s linear;
   overflow: scroll;
   overflow-x: hidden;
+
+  background-color: var(--primary-page-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+
+  --navbar-color: black;
+  --navbar-active: white;
+  --navbar-inactive: #a7a7a7;
+  --color-effect: linear-gradient(
+    45deg,
+    rgba(0, 204, 255, 0.5),
+    rgba(255, 0, 204, 0.5)
+  );
+}
+
+/* Dark mode styles */
+body.darkmode {
+  --primary-page-bg: #191919;
+  --alt-page-bg: #191919;
+  --text-color: white;
+  --border-color: #fffef8;
+}
+
+/* Light mode */
+body.lightmode {
+  --primary-page-bg: #fffef8;
+  --alt-page-bg: #fffef8;
+  --text-color: black;
+  --border-color: black;
 }
 
 ::-webkit-scrollbar {

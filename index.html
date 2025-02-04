@@ -5,29 +5,19 @@
     <link rel="icon" type="image/svg+xml" href="/src/assets/logo.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kevin Fries</title>
-
-    <!-- Synchronous script to set theme before rendering -->
+    <link rel="stylesheet" href="/src/index.css" />
     <script>
       (function () {
-        const isDarkMode = localStorage.getItem("darkMode") === "enabled";
-        const root = document.documentElement;
-
-        // Apply the correct theme based on the saved preference
-        if (isDarkMode) {
-          root.style.setProperty("--primary-page-bg", "#191919");
-          root.style.setProperty("--alt-page-bg", "rgba(25, 25, 25, 0.5)");
-          root.style.setProperty("--text-color", "white");
-          root.style.setProperty("--border-color", "#fffef8");
+        const darkMode = localStorage.getItem("darkMode") === "enabled";
+        if (darkMode) {
+          document.documentElement.style.backgroundColor = "#191919";
+          document.documentElement.style.color = "white";
         } else {
-          root.style.setProperty("--primary-page-bg", "#fffef8");
-          root.style.setProperty("--alt-page-bg", "#fffef8");
-          root.style.setProperty("--text-color", "black");
-          root.style.setProperty("--border-color", "black");
+          document.documentElement.style.backgroundColor = "#fffef8";
+          document.documentElement.style.color = "black";
         }
       })();
     </script>
-
-    <link rel="stylesheet" href="/src/index.css" />
   </head>
   <body>
     <div id="root"></div>
