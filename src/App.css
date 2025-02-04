@@ -5,9 +5,16 @@ main {
   margin: auto;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 h2 {
   font-size: 2rem;
-  font-weight: 300;
+}
+
+p {
+  font-size: 1.5rem;
 }
 
 /* Button Effect */
@@ -65,5 +72,18 @@ h2 {
   main {
     width: 100%;
     padding: 0;
+  }
+
+  h1 {
+    font-size: calc(1rem + 2vw);
+  }
+
+  h2 {
+    font-size: calc(1rem + 2vw);
+    font-weight: 300;
+  }
+
+  p {
+    font-size: calc(1rem + 1vw);
   }
 }
