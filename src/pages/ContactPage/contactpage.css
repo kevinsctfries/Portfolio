@@ -1,3 +1,10 @@
+/*
+====================================
+= CONTACT PAGE STYLES
+====================================
+*/
+
+/* Contact Container */
 .contact {
   font-weight: 200;
   width: 50%;
@@ -13,6 +20,7 @@
   overflow: hidden;
 }
 
+/* Contact Info */
 .contact-info {
   font-size: 1.5rem;
   padding: 0;
@@ -29,6 +37,7 @@
   border-bottom: 1px solid;
 }
 
+/* Responsive Design */
 @media only screen and (max-width: 60em) {
   .contact {
     width: 95%;
