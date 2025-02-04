@@ -35,7 +35,7 @@ const HomePage = () => {
         <div className="skillsTable">
           <div className="skills">
             <h2>Front End</h2>
-            <ul>
+            <ul aria-labelledby="frontend-skills">
               {frontEndSkills.map((skill, index) => (
                 <li key={index}>{skill}</li>
               ))}
@@ -43,7 +43,7 @@ const HomePage = () => {
           </div>
           <div className="skills">
             <h2>Back End</h2>
-            <ul>
+            <ul aria-labelledby="backend-skills">
               {backEndSkills.map((skill, index) => (
                 <li key={index}>{skill}</li>
               ))}
@@ -52,7 +52,7 @@ const HomePage = () => {
         </div>
         <div className="skills">
           <h2>Other Skills</h2>
-          <ul>
+          <ul aria-labelledby="other-skills">
             {otherSkills.map((skill, index) => (
               <li key={index}>{skill}</li>
             ))}
