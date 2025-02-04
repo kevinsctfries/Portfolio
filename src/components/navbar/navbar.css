@@ -1,43 +1,76 @@
+/*
+====================================
+= NAVBAR STYLES
+====================================
+*/
+
+/* Header (Navbar Container) */
 header {
   background-color: var(--navbar-color);
   display: flex;
   justify-content: flex-end;
-  gap: 1rem;
   align-items: center;
   height: 3rem;
   font-weight: 400;
   font-size: 1rem;
-  a {
-    color: var(--navbar-inactive);
-    margin: 0 1rem;
-    text-decoration: none; /* Combine these into one block */
-  }
-  a:hover,
-  a:active {
-    text-decoration: none;
-  }
 }
 
-.active {
+/* Navbar Links */
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  color: var(--navbar-inactive);
+  text-align: center;
+  background: var(--navbar-color);
+  margin: 0 1rem;
+  padding: 0.25rem;
+  text-decoration: none;
+  border-radius: 5px;
+  width: 5rem;
+}
+
+header a:hover {
+  box-shadow: 0 0 5px white;
+}
+
+header a:hover,
+header a:active {
+  text-decoration: none;
+}
+
+/* Active Link State */
+.nav-links .active {
+  background: var(--color-effect);
   color: var(--navbar-active);
   transform: scale(1.2);
   transition: all 0.1s linear;
 }
 
+/* Dark Mode Button */
 #darkmodeBtn {
   color: var(--navbar-active);
   margin: 0 1rem 0 1rem;
 }
 
+/* Responsive Design */
 @media only screen and (max-width: 60em) {
   header {
-    justify-content: space-evenly;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
     gap: 1rem;
-    a {
-      margin: 0;
-    }
-    #darkmodeBtn {
-      margin: 0;
-    }
+    flex-grow: 1;
+  }
+
+  #darkmodeBtn {
+    position: absolute;
+    right: 1rem;
   }
 }

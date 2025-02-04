@@ -40,10 +40,12 @@ const ProjectsPage = () => {
         <div className="project-links">
           <a
             href="https://github.com/kevinsctfries/ohnotation"
-            className="project-link">
+            className="project-link button-effect">
             GitHub
           </a>
-          <a href="https://ohnotation.vercel.app/" className="project-link">
+          <a
+            href="https://ohnotation.vercel.app/"
+            className="project-link button-effect">
             Visit Site
           </a>
         </div>

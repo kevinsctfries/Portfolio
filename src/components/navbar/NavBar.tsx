@@ -25,9 +25,11 @@ const NavBar = () => {
 
   return (
     <header>
-      <NavLink to="/">HOME</NavLink>
-      <NavLink to="/projects">PROJECTS</NavLink>
-      <NavLink to="/contact">CONTACT</NavLink>
+      <div className="nav-links">
+        <NavLink to="/">HOME</NavLink>
+        <NavLink to="/projects">PROJECTS</NavLink>
+        <NavLink to="/contact">CONTACT</NavLink>
+      </div>
       <IconButton
         disableRipple={true}
         size={"small"}
