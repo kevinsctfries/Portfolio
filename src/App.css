@@ -10,11 +10,6 @@ h2 {
   font-weight: 300;
 }
 
-.name {
-  color: var(--alt-text-color);
-  font-weight: 300;
-}
-
 /* Button Effect */
 
 .button-effect {

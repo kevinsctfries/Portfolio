@@ -23,11 +23,11 @@ const HomePage = () => {
       <div className="section">
         <h2>hello,</h2>
         <p>
-          My name is <span className="name">Kevin Fries</span>, and I like
-          making websites! I am passionate about building user-friendly,
-          responsive, and performant websites. Over the years, I've honed my
-          skills in both front-end and back-end development, and I enjoy the
-          process of turning complex problems into simple, elegant solutions.
+          My name is <span>Kevin Fries</span>, and I like making websites! I am
+          passionate about building user-friendly, responsive, and performant
+          websites. Over the years, I've honed my skills in both front-end and
+          back-end development, and I enjoy the process of turning complex
+          problems into simple, elegant solutions.
         </p>
       </div>
       <div className="section">
