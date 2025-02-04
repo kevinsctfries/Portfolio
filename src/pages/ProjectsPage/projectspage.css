@@ -86,6 +86,10 @@
     flex-direction: column;
   }
 
+  .project-image {
+    max-width: 50%;
+  }
+
   .project-links {
     justify-content: space-between;
   }
