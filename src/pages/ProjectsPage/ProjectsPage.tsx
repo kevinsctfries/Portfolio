@@ -5,7 +5,7 @@ import ohNotation from "../../assets/ohnotation.png";
 const ProjectsPage = () => {
   return (
     <div className="projects-container">
-      <h2>what I've worked on</h2>
+      <h1>what I've worked on</h1>
 
       <div className="project-item">
         <h2>Untitled Game</h2>
@@ -40,12 +40,14 @@ const ProjectsPage = () => {
         <div className="project-links">
           <a
             href="https://github.com/kevinsctfries/ohnotation"
-            className="project-link button-effect">
+            className="project-link button-effect"
+            aria-label="View source code">
             GitHub
           </a>
           <a
             href="https://ohnotation.vercel.app/"
-            className="project-link button-effect">
+            className="project-link button-effect"
+            aria-label="Visit site">
             Visit Site
           </a>
         </div>

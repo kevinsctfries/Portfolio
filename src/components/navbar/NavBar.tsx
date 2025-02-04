@@ -46,7 +46,8 @@ const NavBar = () => {
         size={"small"}
         id="darkmodeBtn"
         onClick={toggleDarkMode}
-        className={darkMode ? "darkBtn" : "lightBtn"}>
+        className={darkMode ? "darkBtn" : "lightBtn"}
+        aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}>
         {darkMode ? <NightlightOutlinedIcon /> : <LightModeOutlinedIcon />}
       </IconButton>
     </header>
