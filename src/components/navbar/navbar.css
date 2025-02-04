@@ -74,3 +74,15 @@ header a:active {
     right: 1rem;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .nav-links {
+    gap: 0;
+  }
+
+  .nav-links a {
+    margin: 0.5rem;
+    font-size: 0.75rem;
+    width: 3.5rem;
+  }
+}
