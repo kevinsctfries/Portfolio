@@ -9,17 +9,15 @@ const NavBar = () => {
   const [darkMode, setDarkMode] = useState<boolean>(() => {
     // Get the current dark mode preference from localStorage
     const mode = localStorage.getItem("darkMode");
-    return mode === "enabled"; // Check if dark mode is enabled
+    return mode === "enabled";
   });
 
   const toggleDarkMode = () => {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
 
-    // Store the new preference in localStorage
     localStorage.setItem("darkMode", newDarkMode ? "enabled" : "disabled");
 
-    // Get the root element for CSS variable updates
     const root = document.documentElement;
 
     if (newDarkMode) {
@@ -47,8 +45,9 @@ const NavBar = () => {
         disableRipple={true}
         size={"small"}
         id="darkmodeBtn"
-        onClick={toggleDarkMode}>
-        {darkMode ? <LightModeOutlinedIcon /> : <NightlightOutlinedIcon />}
+        onClick={toggleDarkMode}
+        className={darkMode ? "darkBtn" : "lightBtn"}>
+        {darkMode ? <NightlightOutlinedIcon /> : <LightModeOutlinedIcon />}
       </IconButton>
     </header>
   );

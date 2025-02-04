@@ -50,8 +50,44 @@ header a:active {
 
 /* Dark Mode Button */
 #darkmodeBtn {
-  color: var(--navbar-active);
-  margin: 0 1rem 0 1rem;
+  margin: 1rem;
+  color: white;
+  border-radius: 5px;
+  padding: 0.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s, box-shadow 0.3s;
+  z-index: 1;
+}
+
+#darkmodeBtn::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  transition: top 0.3s ease;
+  z-index: -1;
+}
+
+#darkmodeBtn.lightBtn {
+  color: black;
+}
+
+#darkmodeBtn.lightBtn::before {
+  top: 0;
+}
+
+#darkmodeBtn.darkBtn {
+  background: transparent;
+  color: white;
+  box-shadow: 0 0 5px white;
+}
+
+#darkmodeBtn.darkBtn::before {
+  top: 100%;
 }
 
 /* Responsive Design */
@@ -69,6 +105,12 @@ header a:active {
     flex-grow: 1;
   }
 
+  .nav-links a {
+    margin: 0.5rem;
+    font-size: 1rem;
+    max-width: 15vw;
+  }
+
   #darkmodeBtn {
     position: absolute;
     right: 1rem;
@@ -76,13 +118,12 @@ header a:active {
 }
 
 @media only screen and (max-width: 768px) {
-  .nav-links {
-    gap: 0;
+  .nav-links a {
+    font-size: 0.75rem;
+    max-width: 15vw;
   }
 
-  .nav-links a {
-    margin: 0.5rem;
-    font-size: 0.75rem;
-    width: 3.5rem;
+  #darkmodeBtn {
+    margin: 0;
   }
 }
