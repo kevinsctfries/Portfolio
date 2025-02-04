@@ -6,6 +6,10 @@
 
 .section {
   border-bottom: 1px solid var(--border-color);
+
+  p span {
+    font-weight: 500;
+  }
 }
 
 .skillsTable {
