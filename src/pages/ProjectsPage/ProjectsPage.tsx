@@ -53,64 +53,6 @@ const ProjectsPage = () => {
             </a>
           </div>
         </div>
-
-        <div className="project-item">
-          <h2>Untitled Game</h2>
-          <div className="project-content">
-            <p>
-              An isometric game engine developed in TypeScript and PixiJS,
-              featuring multiplayer/online functionality!
-            </p>
-            <img
-              src={typeTwo}
-              alt="Untitled Game Screenshot"
-              className="project-image"
-            />
-          </div>
-        </div>
-
-        <div className="project-item">
-          <h2>Untitled Game</h2>
-          <div className="project-content">
-            <p>
-              An isometric game engine developed in TypeScript and PixiJS,
-              featuring multiplayer/online functionality!
-            </p>
-            <img
-              src={typeTwo}
-              alt="Untitled Game Screenshot"
-              className="project-image"
-            />
-          </div>
-        </div>
-        <div className="project-item">
-          <h2>Untitled Game</h2>
-          <div className="project-content">
-            <p>
-              An isometric game engine developed in TypeScript and PixiJS,
-              featuring multiplayer/online functionality!
-            </p>
-            <img
-              src={typeTwo}
-              alt="Untitled Game Screenshot"
-              className="project-image"
-            />
-          </div>
-        </div>
-        <div className="project-item">
-          <h2>Untitled Game</h2>
-          <div className="project-content">
-            <p>
-              An isometric game engine developed in TypeScript and PixiJS,
-              featuring multiplayer/online functionality!
-            </p>
-            <img
-              src={typeTwo}
-              alt="Untitled Game Screenshot"
-              className="project-image"
-            />
-          </div>
-        </div>
       </div>
     </>
   );
