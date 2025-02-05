@@ -7,7 +7,7 @@ body {
   overflow: scroll;
   overflow-x: hidden;
 
-  background-color: var(--primary-page-bg);
+  background: var(--primary-page-bg);
   color: var(--text-color);
   border-color: var(--border-color);
 
