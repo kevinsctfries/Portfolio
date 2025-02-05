@@ -26,6 +26,10 @@
   border-left: 1px solid;
 }
 
+.project-item:last-child {
+  border-bottom: 1px solid;
+}
+
 .project-item h2 {
   display: inline-block;
   margin-right: 0;
