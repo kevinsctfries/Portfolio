@@ -21,6 +21,10 @@
   border-right: 1px solid;
 }
 
+.project-item > p {
+  margin: 1rem;
+}
+
 .project-item:nth-child(odd) {
   border-right: none;
   border-left: 1px solid;
