@@ -1,54 +1,47 @@
-import { IconButton } from "@mui/material";
-import NightlightOutlinedIcon from "@mui/icons-material/NightlightOutlined";
-import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
-import { useState, useEffect } from "react";
-import { NavLink as NavLinkType } from "react-router-dom";
-import "./navbar.css";
-
-const NavLink = NavLinkType as React.ComponentType<{
-  to: string;
-  children: React.ReactNode;
-  className?: string;
-}>;
+import { useEffect, useRef } from "react";
+import "./navbar.scss";
 
 const NavBar = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(() => {
-    return localStorage.getItem("darkMode") === "enabled";
-  });
+  const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("darkmode");
-      document.body.classList.remove("lightmode");
-    } else {
-      document.body.classList.add("lightmode");
-      document.body.classList.remove("darkmode");
-    }
-  }, [darkMode]);
+    const handleScroll = () => {
+      const { scrollY, innerHeight } = window;
+      const { scrollHeight } = document.documentElement;
+      const scrollPercentage = scrollY / (scrollHeight - innerHeight);
+      const width = Math.min(100, 25 + scrollPercentage * 75);
 
-  const toggleDarkMode = () => {
-    const newDarkMode = !darkMode;
-    setDarkMode(newDarkMode);
-    localStorage.setItem("darkMode", newDarkMode ? "enabled" : "disabled");
+      navRef.current?.style.setProperty("--nav-bg-width", `${width}%`);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const navHeight = navRef.current?.offsetHeight || 0;
+      const y =
+        section.getBoundingClientRect().top + window.scrollY - navHeight;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   };
 
   return (
-    <header>
-      <div className="nav-links">
-        <NavLink to="/">HOME</NavLink>
-        <NavLink to="/projects">PROJECTS</NavLink>
-        <NavLink to="/contact">CONTACT</NavLink>
+    <nav ref={navRef}>
+      <div className="initials">
+        <span>KF</span>
       </div>
-      <IconButton
-        disableRipple={true}
-        size="small"
-        id="darkmodeBtn"
-        onClick={toggleDarkMode}
-        className={darkMode ? "darkBtn" : "lightBtn"}
-        aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}>
-        {darkMode ? <NightlightOutlinedIcon /> : <LightModeOutlinedIcon />}
-      </IconButton>
-    </header>
+      <div className="nav-links">
+        <button onClick={() => scrollToSection("home")}>Home</button>
+        <button onClick={() => scrollToSection("skills")}>My Skills</button>
+        <button onClick={() => scrollToSection("projects")}>Projects</button>
+        <button onClick={() => scrollToSection("contact")}>Contact</button>
+      </div>
+    </nav>
   );
 };
 

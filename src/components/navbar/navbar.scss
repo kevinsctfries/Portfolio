@@ -1,0 +1,87 @@
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-top: 10px solid var(--color-accent-blue);
+    background-color: white;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 75%;
+        width: var(--nav-bg-width, 25%);
+        background-color: var(--color-accent-yellow);
+        box-shadow: 5px 5px black;
+        transform: skewX(-20deg);
+        transform-origin: left;
+        z-index: 0;
+        transition: width 0.3s ease-out;
+        left: 1rem;
+        right: 1rem;
+        width: calc(var(--nav-bg-width, 25%) - 2rem);
+    }
+
+    .initials,
+    .nav-links {
+        position: relative;
+        z-index: 1;
+    }
+
+    .initials {
+        span {
+            font-size: var(--font-size-xlarge);
+            font-weight: bold;
+            color: var(--color-text);
+            padding: 0 4rem;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.5rem;
+
+        button {
+            border: none;
+            background-color: transparent;
+            position: relative;
+            cursor: pointer;
+            font-weight: bold;
+            padding: 0 1rem;
+            font-size: var(--font-size-xlarge);
+            color: var(--color-text);
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 4px;
+                background-color: var(--color-accent-pink);
+                transform-origin: bottom;
+                transition:
+                    height 0.3s ease,
+                    bottom 0.3s ease;
+                transform: skewX(-20deg);
+                box-shadow: 2px 2px 2px black;
+
+                z-index: -1;
+            }
+
+            &:hover {
+                color: white;
+            }
+
+            &:hover::after {
+                height: 100%;
+                transform: skewX(-20deg);
+            }
+        }
+    }
+}

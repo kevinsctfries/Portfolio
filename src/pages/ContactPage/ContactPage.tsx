@@ -1,10 +1,10 @@
-import "./contactpage.css";
+import "./contactpage.scss";
 
 const ContactPage = () => {
   return (
     <>
       <div className="contact">
-        <h1>contact me</h1>
+        <h2>contact me</h2>
         <ul className="contact-info">
           <li>kevinsctfries@gmail.com</li>
           <li>

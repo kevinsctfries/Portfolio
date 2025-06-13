@@ -1,0 +1,45 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+
+    h2 {
+        font-size: var(--h3-font-size);
+        margin: 0;
+        color: var(--color-text);
+    }
+
+    .contact-info {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        li {
+            font-size: var(--font-size-large);
+            color: var(--color-text);
+            transition: transform 0.2s ease;
+
+            a {
+                color: var(--color-accent-pink);
+                text-decoration: none;
+                font-weight: bold;
+                padding: 0.5rem 1rem;
+                border: 2px solid black;
+                border-radius: 0.5rem;
+                box-shadow: 3px 3px black;
+                background: var(--color-surface);
+                transition: all 0.2s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 5px 5px black;
+                }
+            }
+        }
+    }
+}

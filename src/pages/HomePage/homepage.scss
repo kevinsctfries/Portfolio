@@ -1,0 +1,58 @@
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    .portrait-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) skewY(-6deg);
+            width: 60%;
+            height: 100%;
+            background-color: var(--color-accent-yellow);
+            z-index: 0;
+            border-radius: 2rem;
+        }
+
+        .portrait {
+            position: relative;
+            z-index: 1;
+            width: 33%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 2rem;
+            border: 5px solid black;
+            object-fit: cover;
+
+            @media screen and (max-width: 1200px) {
+                width: 50%;
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 75%;
+            }
+        }
+    }
+
+    p {
+        font-size: var(--font-size-xlarge);
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+        color: var(--color-text);
+
+        span {
+            color: var(--color-accent-pink);
+        }
+    }
+}
