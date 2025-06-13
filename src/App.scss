@@ -3,5 +3,11 @@ section:nth-of-type(even) {
     border-radius: 2rem;
     border: 2px solid black;
     box-shadow: 5px 5px black;
-    margin: 1rem;
+    margin: 0 auto;
+    width: 75%;
+
+    @media (max-width: 1200px) {
+        width: 90%;
+        padding: 2rem;
+    }
 }
