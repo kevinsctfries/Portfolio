@@ -60,11 +60,10 @@
 
         .project-links {
             display: flex;
-            gap: 1rem;
-        }
 
-        &:hover {
-            transform: translateY(-5px);
+            .button {
+                margin: 1rem;
+            }
         }
     }
 }
