@@ -9,7 +9,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 2rem 0;
+        margin: 4rem 0;
 
         &::before {
             content: "";
@@ -27,7 +27,7 @@
         .portrait {
             position: relative;
             z-index: 1;
-            width: 33%;
+            width: 50%;
             max-width: 500px;
             height: auto;
             border-radius: 2rem;
