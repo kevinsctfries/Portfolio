@@ -11,9 +11,10 @@ nav {
         content: "";
         position: absolute;
         height: 75%;
-        background-color: var(--color-accent-yellow);
+        border-radius: 0.5rem;
+        background-color: var(--color-surface);
         box-shadow: 5px 5px black;
-        transform: skewX(-20deg);
+        border: 2px solid black;
         transform-origin: left;
         z-index: 0;
         left: 1rem;
@@ -30,40 +31,17 @@ nav {
         user-select: none;
 
         button {
-            border: none;
-            background-color: transparent;
-            position: relative;
-            cursor: pointer;
+            padding: 0.5rem 2rem;
             font-weight: bold;
-            padding: 0 1rem;
-            font-size: var(--font-size-xlarge);
-            color: var(--color-text);
-
-            &::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                height: 4px;
-                background-color: var(--color-accent-pink);
-                transform-origin: bottom;
-                transition:
-                    height 0.3s ease,
-                    bottom 0.3s ease;
-                transform: skewX(-20deg);
-                box-shadow: 2px 2px 2px black;
-
-                z-index: -1;
-            }
+            border: 2px solid black;
+            border-radius: 0.5rem;
+            box-shadow: 3px 3px black;
+            transition: all 0.2s ease;
+            cursor: pointer;
 
             &:hover {
-                color: white;
-            }
-
-            &:hover::after {
-                height: 100%;
-                transform: skewX(-20deg);
+                transform: translateY(-2px);
+                box-shadow: 5px 5px black;
             }
         }
     }
@@ -73,7 +51,7 @@ nav {
     nav {
         &::before {
             left: 50%;
-            transform: translateX(-50%) skewX(-20deg);
+            transform: translateX(-50%);
             width: calc(var(--nav-bg-width) + 2rem);
         }
 
