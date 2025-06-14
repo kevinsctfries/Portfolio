@@ -12,13 +12,13 @@ export const portfolioRepos: PortfolioRepo[] = [
   },
   {
     name: "ohnotation",
-    desc: "A tool to visualize algorithm complexity!",
-    image: "/public/logo.jpeg",
+    desc: "A learning resource for understanding time and space complexity",
+    image: "/public/ohnotation.png",
   },
   {
     name: "UNet",
     desc: "Reddit-like social platform made from scratch!",
-    image: "/public/logo.jpeg",
+    image: "/public/unet.png",
   },
   {
     name: "ytt-gen",
@@ -28,11 +28,11 @@ export const portfolioRepos: PortfolioRepo[] = [
   {
     name: "choose-option-helper",
     desc: "A replication of the right-click menu in OSRS",
-    image: "/public/logo.jpeg",
+    image: "/public/chooseoptionhelper.png",
   },
   {
     name: "flashy",
     desc: "Locally ran AI powered flashcard generator",
-    image: "/public/logo.jpeg",
+    image: "/public/flashy.png",
   },
 ];
