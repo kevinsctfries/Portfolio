@@ -50,21 +50,6 @@ nav {
         position: relative;
         z-index: 1;
         user-select: none;
-
-        button {
-            padding: 0.5rem 2rem;
-            font-weight: bold;
-            border: 2px solid black;
-            border-radius: 0.5rem;
-            box-shadow: 3px 3px black;
-            transition: all 0.2s ease;
-            cursor: pointer;
-
-            &:hover {
-                transform: translateY(-2px);
-                box-shadow: 5px 5px black;
-            }
-        }
     }
 }
 

@@ -15,24 +15,4 @@
         font-size: var(--font-size-large);
         color: var(--color-text);
     }
-    .contact-links {
-        a {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            margin: 0.5rem;
-            color: var(--color-text);
-            background-color: var(--color-surface);
-            text-decoration: none;
-            font-weight: bold;
-            border: 2px solid black;
-            border-radius: 0.5rem;
-            box-shadow: 3px 3px black;
-            transition: all 0.2s ease;
-
-            &:hover {
-                transform: translateY(-2px);
-                box-shadow: 5px 5px black;
-            }
-        }
-    }
 }

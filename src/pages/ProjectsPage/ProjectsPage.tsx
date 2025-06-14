@@ -41,7 +41,11 @@ const ProjectsPage = () => {
                 <img src={portfolio.image} alt={repo.name} />
               )}
               <div className="project-links">
-                <a href={repo.html_url} target="_blank" rel="noreferrer">
+                <a
+                  className="button"
+                  href={repo.html_url}
+                  target="_blank"
+                  rel="noreferrer">
                   View on GitHub
                 </a>
               </div>

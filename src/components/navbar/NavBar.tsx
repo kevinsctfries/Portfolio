@@ -55,10 +55,18 @@ const NavBar = () => {
   return (
     <nav ref={navRef}>
       <div className="nav-links">
-        <button onClick={() => scrollToSection("home")}>Home</button>
-        <button onClick={() => scrollToSection("skills")}>My Skills</button>
-        <button onClick={() => scrollToSection("projects")}>Projects</button>
-        <button onClick={() => scrollToSection("contact")}>Contact</button>
+        <button className="button" onClick={() => scrollToSection("home")}>
+          Home
+        </button>
+        <button className="button" onClick={() => scrollToSection("skills")}>
+          My Skills
+        </button>
+        <button className="button" onClick={() => scrollToSection("projects")}>
+          Projects
+        </button>
+        <button className="button" onClick={() => scrollToSection("contact")}>
+          Contact
+        </button>
       </div>
       <span className="you-made-it">You made it to the end! :)</span>
     </nav>
