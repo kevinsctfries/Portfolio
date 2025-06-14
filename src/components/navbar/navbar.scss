@@ -1,42 +1,43 @@
 nav {
+    display: flex;
+    justify-content: space-between;
     position: sticky;
     top: 0;
     z-index: 10;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: clamp(0.5rem, 2vw, 2rem);
+    padding: clamp(0.5rem, 2vw, 2rem) !important;
     overflow: hidden;
 
     &::before {
+        margin: 0;
         content: "";
         position: absolute;
-        left: 1rem;
         height: 75%;
-        width: calc(var(--nav-bg-width) + 2rem);
         border-radius: 0.5rem;
         background-color: var(--color-surface);
-        border: 2px solid black;
         box-shadow: 5px 5px black;
+        border: 2px solid black;
         transform-origin: left;
-        transition: width 0.1s ease-out;
         z-index: 0;
+        left: 1rem;
+        transition: width 0.1s ease-out;
+        width: calc(var(--nav-bg-width) + 2rem);
     }
 
     .you-made-it {
-        left: calc(var(--nav-bg-width) + 2rem);
         white-space: nowrap;
+        left: calc(var(--nav-bg-width) + 2rem);
         font-size: 1rem;
         font-weight: bold;
         color: black;
-        opacity: 0;
         pointer-events: none;
         z-index: 1;
         transition:
             transform 0.2s ease,
             opacity 0.2s ease;
+        opacity: 0;
     }
-
     &.at-100 {
         .you-made-it {
             opacity: 1;
@@ -63,6 +64,10 @@ nav {
 
         .nav-links {
             margin: 0 auto;
+        }
+
+        .you-made-it {
+            display: none;
         }
     }
 }
