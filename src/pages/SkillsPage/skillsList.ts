@@ -40,6 +40,22 @@ export const frontEndSkills: Skill[] = [
     name: "Redux",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
   },
+  {
+    name: "Vue",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg",
+  },
+  {
+    name: "Next.js",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+  },
+  {
+    name: "Jest",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg",
+  },
+  {
+    name: "Three.js",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/threejs/threejs-original.svg",
+  },
 ];
 
 export const backEndSkills: Skill[] = [
@@ -63,6 +79,14 @@ export const backEndSkills: Skill[] = [
     name: "Redis",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
   },
+  {
+    name: "Supabase",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
+  },
+  {
+    name: "Docker",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+  },
 ];
 
 export const otherSkills: Skill[] = [
@@ -85,5 +109,13 @@ export const otherSkills: Skill[] = [
   {
     name: "Docker",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+  },
+  {
+    name: "Firebase",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg",
+  },
+  {
+    name: "Linux",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
   },
 ];
