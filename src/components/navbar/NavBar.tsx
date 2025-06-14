@@ -24,6 +24,12 @@ const NavBar = () => {
       const width = Math.min(max, Math.max(min, percent));
 
       nav.style.setProperty("--nav-bg-width", `${width}%`);
+
+      if (width >= max) {
+        nav.classList.add("at-100");
+      } else {
+        nav.classList.remove("at-100");
+      }
     };
 
     handleScroll();
@@ -54,6 +60,7 @@ const NavBar = () => {
         <button onClick={() => scrollToSection("projects")}>Projects</button>
         <button onClick={() => scrollToSection("contact")}>Contact</button>
       </div>
+      <span className="you-made-it">You made it to the end! :)</span>
     </nav>
   );
 };
