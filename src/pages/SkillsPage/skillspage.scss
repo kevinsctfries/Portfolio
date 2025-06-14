@@ -23,7 +23,7 @@
             grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
             gap: 1.5rem;
             justify-content: center;
-            width: 100%;
+            max-width: 90%;
             user-select: none;
             z-index: 1;
         }
