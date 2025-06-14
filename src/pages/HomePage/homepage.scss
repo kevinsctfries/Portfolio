@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
 
     .portrait-wrapper {
         position: relative;
@@ -17,7 +16,7 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%) skewY(-6deg);
-            width: 60%;
+            width: 70%;
             height: 100%;
             background-color: var(--color-accent-yellow);
             z-index: 0;
@@ -33,14 +32,6 @@
             border-radius: 2rem;
             border: 5px solid black;
             object-fit: cover;
-
-            @media screen and (max-width: 1200px) {
-                width: 50%;
-            }
-
-            @media screen and (max-width: 768px) {
-                width: 75%;
-            }
         }
     }
 
@@ -53,6 +44,22 @@
 
         span {
             color: var(--color-accent-pink);
+            font-size: var(--h3-font-size);
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .homepage {
+        .portrait-wrapper {
+            .portrait {
+            }
+        }
+        p {
+            font-size: 2rem;
+            span {
+                font-size: 2rem;
+            }
         }
     }
 }

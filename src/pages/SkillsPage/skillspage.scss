@@ -7,13 +7,12 @@
 
     .skills-category {
         width: 100%;
-        max-width: 1200px;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         h3 {
-            font-size: var(--h3-font-size);
+            font-size: var(--h2-font-size);
             margin-top: 0;
             margin-bottom: 0.75rem;
             color: var(--color-text);
@@ -32,6 +31,7 @@
 
     .skill-card {
         display: flex;
+        margin: 0 auto;
         flex-direction: column;
         align-items: center;
         background: var(--color-surface);
@@ -40,7 +40,7 @@
         padding: 1rem;
         text-align: center;
         transition: transform 0.2s ease;
-        width: 100px;
+        width: 8rem;
         height: 150px;
         justify-content: center;
         box-shadow: 5px 5px black;
@@ -54,7 +54,7 @@
 
         span {
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: var(--font-size-base);
         }
 
         &:hover {
