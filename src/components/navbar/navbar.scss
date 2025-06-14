@@ -3,7 +3,6 @@ nav {
     top: 0;
     z-index: 10;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
     overflow: hidden;
@@ -12,37 +11,23 @@ nav {
         content: "";
         position: absolute;
         height: 75%;
-        width: var(--nav-bg-width, 25%);
         background-color: var(--color-accent-yellow);
         box-shadow: 5px 5px black;
         transform: skewX(-20deg);
         transform-origin: left;
         z-index: 0;
-        transition: width 0.3s ease-out;
+        transition: width 0.1s ease-out;
+        padding: 0 2rem;
         left: 1rem;
-        right: 1rem;
-        width: calc(var(--nav-bg-width, 25%) - 2rem);
-    }
-
-    .initials,
-    .nav-links {
-        position: relative;
-        z-index: 1;
-    }
-
-    .initials {
-        span {
-            font-size: var(--font-size-xlarge);
-            font-weight: bold;
-            color: var(--color-text);
-            padding: 0 4rem;
-        }
+        width: calc(var(--nav-bg-width) - 2rem);
     }
 
     .nav-links {
         display: flex;
         justify-content: flex-end;
         gap: 0.5rem;
+        position: relative;
+        z-index: 1;
 
         button {
             border: none;
