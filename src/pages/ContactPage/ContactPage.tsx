@@ -2,19 +2,14 @@ import "./contactpage.scss";
 
 const ContactPage = () => {
   return (
-    <>
-      <div className="contact">
-        <h2>contact me</h2>
-        <ul className="contact-info">
-          <li>kevinsctfries@gmail.com</li>
-          <li>
-            <a href="https://www.linkedin.com/in/kevin-fries-097377302">
-              LinkedIn
-            </a>
-          </li>
-        </ul>
+    <div className="contact">
+      <h2>contact me</h2>
+      <span>kevinsctfries@gmail.com</span>
+      <div className="contact-links">
+        <a href="https://www.linkedin.com/in/kevin-fries-097377302">LinkedIn</a>
+        <a href="https://github.com/kevinsctfries/">GitHub</a>
       </div>
-    </>
+    </div>
   );
 };
 
