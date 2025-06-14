@@ -23,6 +23,32 @@
   --h3-font-size: clamp(1.75rem, 3vw, 3rem);
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  font-feature-settings:
+    "liga" 1,
+    "calt" 1;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+}
+
+body {
+  font-feature-settings:
+    "liga" 1,
+    "calt" 1;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+// Highlighter themes
 [class*="highlight-yellow"] {
   position: relative;
   padding: 0.5rem 2rem;
@@ -83,29 +109,20 @@
   }
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-family);
-  font-feature-settings:
-    "liga" 1,
-    "calt" 1;
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-  color: var(--color-text);
-}
+// Button theme
+[class*="button"] {
+  padding: 0.5rem 2rem;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 0.5rem;
+  box-shadow: 3px 3px black;
+  transition: all 0.2s ease;
+  cursor: pointer;
 
-body {
-  font-feature-settings:
-    "liga" 1,
-    "calt" 1;
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 5px 5px black;
+  }
 }
 
 @supports (font-variation-settings: normal) {
