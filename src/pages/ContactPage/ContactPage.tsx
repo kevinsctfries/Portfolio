@@ -2,7 +2,7 @@ import "./contactpage.scss";
 
 const ContactPage = () => {
   return (
-    <div className="contact">
+    <div className="contact text-box">
       <h2>contact me</h2>
       <span>kevinsctfries@gmail.com</span>
       <div className="contact-links">

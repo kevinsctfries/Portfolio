@@ -29,7 +29,7 @@ const ProjectsPage = () => {
 
   return (
     <div className="projects-page">
-      <h2>My Projects</h2>
+      <h2 className="highlight-yellow">My Projects</h2>
       <div className="projects-grid">
         {filteredAndSortedProjects.map(repo => {
           const portfolio = portfolioRepos.find(pr => pr.name === repo.name);

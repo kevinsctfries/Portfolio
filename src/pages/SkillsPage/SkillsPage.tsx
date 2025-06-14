@@ -23,19 +23,19 @@ const SkillsPage = () => {
   return (
     <div className="skills-page section">
       <div className="skills-category">
-        <h3>Languages</h3>
+        <h3 className="highlight-blue">Languages</h3>
         <div className="skills-grid">{renderSkillCards(languageSkills)}</div>
       </div>
       <div className="skills-category">
-        <h3>Front-end Skills</h3>
+        <h3 className="highlight-blue">Front-end Skills</h3>
         <div className="skills-grid">{renderSkillCards(frontEndSkills)}</div>
       </div>
       <div className="skills-category">
-        <h3>Back-end Skills</h3>
+        <h3 className="highlight-blue">Back-end Skills</h3>
         <div className="skills-grid">{renderSkillCards(backEndSkills)}</div>
       </div>
       <div className="skills-category">
-        <h3>Other Skills</h3>
+        <h3 className="highlight-blue">Other Skills</h3>
         <div className="skills-grid">{renderSkillCards(otherSkills)}</div>
       </div>
     </div>

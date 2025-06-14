@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem 0;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
 
     h2 {
         font-size: var(--h3-font-size);

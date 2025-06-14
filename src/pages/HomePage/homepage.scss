@@ -34,7 +34,6 @@
             object-fit: cover;
         }
     }
-
     p {
         font-size: var(--h3-font-size);
         font-weight: bold;
@@ -51,10 +50,6 @@
 
 @media screen and (max-width: 1200px) {
     .homepage {
-        .portrait-wrapper {
-            .portrait {
-            }
-        }
         p {
             font-size: 2rem;
             span {
