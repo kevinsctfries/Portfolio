@@ -1,10 +1,9 @@
 nav {
-    display: flex;
-    justify-content: space-between;
     position: sticky;
     top: 0;
     z-index: 10;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: clamp(0.5rem, 2vw, 2rem);
     overflow: hidden;
@@ -12,31 +11,32 @@ nav {
     &::before {
         content: "";
         position: absolute;
+        left: 1rem;
         height: 75%;
+        width: calc(var(--nav-bg-width) + 2rem);
         border-radius: 0.5rem;
         background-color: var(--color-surface);
-        box-shadow: 5px 5px black;
         border: 2px solid black;
+        box-shadow: 5px 5px black;
         transform-origin: left;
-        z-index: 0;
-        left: 1rem;
         transition: width 0.1s ease-out;
-        width: calc(var(--nav-bg-width) + 2rem);
+        z-index: 0;
     }
 
     .you-made-it {
-        white-space: nowrap;
         left: calc(var(--nav-bg-width) + 2rem);
+        white-space: nowrap;
         font-size: 1rem;
         font-weight: bold;
         color: black;
+        opacity: 0;
         pointer-events: none;
         z-index: 1;
         transition:
             transform 0.2s ease,
             opacity 0.2s ease;
-        opacity: 0;
     }
+
     &.at-100 {
         .you-made-it {
             opacity: 1;

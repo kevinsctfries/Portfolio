@@ -3,17 +3,17 @@
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-    padding: 2rem;
-    overflow-x: hidden;
     width: 100%;
     max-width: min(1200px, 100%);
+    padding: 2rem;
     margin: 0 auto;
+    overflow-x: hidden;
 
     h2 {
+        margin: 0;
         font-size: var(--h2-font-size);
         color: var(--color-text);
         text-shadow: 1px 1px black;
-        margin: 0;
     }
 
     .projects-grid {
@@ -29,26 +29,19 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        min-height: 200px;
         background: var(--color-surface);
         border: 2px solid black;
         border-radius: 1rem;
-        text-align: center;
         box-shadow: 5px 5px black;
+        text-align: center;
         transition: transform 0.2s ease;
-        min-height: 200px;
 
         h3 {
+            width: 100%;
+            margin: 0;
             font-size: var(--font-size-large);
             color: var(--color-text);
-            border: none;
-            width: 100%;
-        }
-
-        p {
-            flex-grow: 1;
-            font-size: var(--font-size-base);
-            color: var(--color-text);
-            margin-bottom: 1rem;
         }
 
         img {
@@ -56,6 +49,13 @@
             max-height: 180px;
             object-fit: cover;
             border: 2px solid black;
+        }
+
+        p {
+            flex-grow: 1;
+            margin: 0 0 1rem;
+            font-size: var(--font-size-base);
+            color: var(--color-text);
         }
 
         .project-links {

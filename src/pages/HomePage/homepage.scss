@@ -19,8 +19,8 @@
             width: 70%;
             height: 100%;
             background-color: var(--color-accent-yellow);
-            z-index: 0;
             border-radius: 2rem;
+            z-index: 0;
         }
 
         .portrait {
@@ -29,21 +29,22 @@
             width: 50%;
             max-width: 500px;
             height: auto;
+            object-fit: cover;
             border-radius: 2rem;
             border: 5px solid black;
-            object-fit: cover;
         }
     }
+
     p {
+        margin: 0;
+        text-align: center;
         font-size: var(--h3-font-size);
         font-weight: bold;
-        text-align: center;
-        margin: 0;
         color: var(--color-text);
 
         span {
-            color: var(--color-accent-pink);
             font-size: var(--h3-font-size);
+            color: var(--color-accent-pink);
         }
     }
 }
@@ -52,6 +53,7 @@
     .homepage {
         p {
             font-size: 2rem;
+
             span {
                 font-size: 2rem;
             }
