@@ -24,10 +24,9 @@ export const frontEndSkills: Skill[] = [
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg",
   },
   {
-    name: "CSS, SCSS, Tailwind",
+    name: "CSS / SCSS / Tailwind",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
   },
-
   {
     name: "React",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
@@ -37,16 +36,17 @@ export const frontEndSkills: Skill[] = [
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg",
   },
   {
-    name: "Redux",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
-  },
-  {
-    name: "Vue",
+    name: "Vue.js",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg",
   },
   {
     name: "Next.js",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+  },
+
+  {
+    name: "Redux",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
   },
   {
     name: "Jest",
@@ -60,20 +60,20 @@ export const frontEndSkills: Skill[] = [
 
 export const backEndSkills: Skill[] = [
   {
-    name: "MySQL",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
-  },
-  {
-    name: "MongoDB",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+    name: "Node.js",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
   },
   {
     name: "Express",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
   },
   {
-    name: "Node.js",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+    name: "MySQL",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+  },
+  {
+    name: "MongoDB",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
   },
   {
     name: "Redis",
@@ -99,20 +99,16 @@ export const otherSkills: Skill[] = [
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg",
   },
   {
+    name: "Firebase",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg",
+  },
+  {
     name: "TensorFlow",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg",
   },
   {
-    name: "Pytorch",
+    name: "PyTorch",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg",
-  },
-  {
-    name: "Docker",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
-  },
-  {
-    name: "Firebase",
-    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg",
   },
   {
     name: "Linux",
