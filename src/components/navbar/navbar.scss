@@ -71,3 +71,16 @@ nav {
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    nav {
+        .nav-links {
+            gap: 2rem;
+        }
+        &::before {
+            border-radius: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
