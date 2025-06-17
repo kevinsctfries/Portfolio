@@ -1,10 +1,10 @@
 nav {
-    display: flex;
-    justify-content: space-between;
     position: sticky;
     top: 0;
     z-index: 10;
     display: flex;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: clamp(0.5rem, 2vw, 2rem) !important;
     overflow: hidden;
@@ -25,6 +25,12 @@ nav {
         width: calc(var(--nav-bg-width) + 2rem);
     }
 
+    &.at-100 {
+        .you-made-it {
+            opacity: 1;
+        }
+    }
+
     .you-made-it {
         white-space: nowrap;
         left: calc(var(--nav-bg-width) + 2rem);
@@ -38,11 +44,6 @@ nav {
             opacity 0.2s ease;
         opacity: 0;
     }
-    &.at-100 {
-        .you-made-it {
-            opacity: 1;
-        }
-    }
 
     .nav-links {
         display: flex;
@@ -51,6 +52,14 @@ nav {
         position: relative;
         z-index: 1;
         user-select: none;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .dropdown-nav {
+        display: none;
     }
 }
 
@@ -74,13 +83,71 @@ nav {
 
 @media screen and (max-width: 768px) {
     nav {
-        .nav-links {
-            gap: 2rem;
-        }
+        justify-content: flex-end;
+
         &::before {
-            border-radius: 0;
-            height: 100%;
+            display: none;
+        }
+
+        .burger {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 10;
+
+            svg {
+                width: 8vw;
+                height: 8vw;
+                max-width: 4rem;
+                max-height: 4rem;
+                color: black;
+                transition:
+                    transform 0.2s ease,
+                    color 0.2s ease;
+                transform-origin: center;
+
+                &.open-icon {
+                    transform: rotate(90deg) scale(1.1);
+                }
+            }
+        }
+
+        .nav-links {
+            display: none;
+        }
+
+        .dropdown-nav {
+            display: flex;
+            position: fixed;
+            top: 0;
+            right: 0;
             width: 100%;
+            background: var(--color-surface);
+            flex-direction: column;
+            align-items: center;
+            padding-top: 4rem;
+            gap: 2rem;
+            height: 100%;
+            transform: translateX(100%);
+            transition: transform 0.2s ease;
+
+            &.open {
+                transform: translateX(0);
+            }
+
+            button {
+                width: 50%;
+                padding: 0.5rem;
+                text-align: center;
+                font-weight: bold;
+                font-size: var(--h2-font-size);
+                background-color: var(--color-surface);
+            }
         }
     }
 }

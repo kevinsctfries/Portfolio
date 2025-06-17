@@ -1,7 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./navbar.scss";
 
 const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -49,6 +50,7 @@ const NavBar = () => {
       const y =
         section.getBoundingClientRect().top + window.scrollY - navHeight;
       window.scrollTo({ top: y, behavior: "smooth" });
+      setIsOpen(false);
     }
   };
 
@@ -68,6 +70,61 @@ const NavBar = () => {
           Contact
         </button>
       </div>
+
+      {/* nav menu for smaller devices */}
+      <button
+        className="burger"
+        aria-label="Open Menu"
+        onClick={() => setIsOpen(open => !open)}>
+        {isOpen ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="open-icon">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        )}
+      </button>
+
+      <div className={`dropdown-nav ${isOpen ? "open" : ""}`}>
+        <div className={`dropdown-nav ${isOpen ? "open" : ""}`}>
+          <button className="button" onClick={() => scrollToSection("home")}>
+            Home
+          </button>
+          <button className="button" onClick={() => scrollToSection("skills")}>
+            My Skills
+          </button>
+          <button
+            className="button"
+            onClick={() => scrollToSection("projects")}>
+            Projects
+          </button>
+          <button className="button" onClick={() => scrollToSection("contact")}>
+            Contact
+          </button>
+        </div>
+      </div>
+
       <span className="you-made-it">You made it to the end! :)</span>
     </nav>
   );
