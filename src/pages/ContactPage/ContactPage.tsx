@@ -4,7 +4,7 @@ const ContactPage = () => {
   return (
     <div className="contact text-box">
       <h2>contact me</h2>
-      <span>kevinsctfries@gmail.com</span>
+      <span className="highlight-blue">kevinsctfries@gmail.com</span>
       <div className="contact-links">
         <a
           className="button"
