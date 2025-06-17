@@ -7,7 +7,7 @@ const HomePage = () => {
       <div className="portrait-wrapper">
         <img src={portrait} alt="" className="portrait" />
       </div>
-      <div className="highlight-yellow">
+      <div>
         <p>
           Hello, my name is <span>Kevin Fries</span>, and I like making
           websites!
