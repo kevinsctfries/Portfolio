@@ -36,7 +36,6 @@
         width: 8rem;
         height: 150px;
         margin: 0 auto;
-        padding: 1rem;
         background: var(--color-surface);
         border: 2px solid black;
         border-radius: 1rem;
@@ -58,6 +57,21 @@
 
         &:hover {
             transform: scale(1.05);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section#skills {
+        width: 100%;
+    }
+
+    .skills-page {
+        .skills-category {
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 2rem;
+            }
         }
     }
 }
