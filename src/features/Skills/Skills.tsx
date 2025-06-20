@@ -1,4 +1,4 @@
-import "./skillspage.scss";
+import "./skills.scss";
 import {
   languageSkills,
   frontEndSkills,

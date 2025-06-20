@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./projectspage.scss";
+import "./projects.scss";
 import { portfolioRepos } from "./portfolioRepos";
 
 interface Repo {

@@ -1,4 +1,4 @@
-import "./homepage.scss";
+import "./home.scss";
 import portrait from "../../assets/Portrait.jpg";
 
 const HomePage = () => {
