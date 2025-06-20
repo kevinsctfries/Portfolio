@@ -1,9 +1,9 @@
 import "./App.scss";
 import NavBar from "./components/navbar/NavBar";
-import HomePage from "./pages/HomePage/HomePage";
-import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
-import ContactPage from "./pages/ContactPage/ContactPage";
-import SkillsPage from "./pages/SkillsPage/SkillsPage";
+import HomePage from "./features/HomePage/HomePage";
+import ProjectsPage from "./features/ProjectsPage/ProjectsPage";
+import ContactPage from "./features/ContactPage/ContactPage";
+import SkillsPage from "./features/SkillsPage/SkillsPage";
 import Background from "./components/background/Background";
 
 function App() {
