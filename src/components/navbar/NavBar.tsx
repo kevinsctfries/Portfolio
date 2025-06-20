@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./navbar.scss";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,6 +82,9 @@ const NavBar = () => {
         <button className="button" onClick={() => scrollToSection("contact")}>
           Contact
         </button>
+        <Link className="button" to="/blog" onClick={() => setIsOpen(false)}>
+          Blog
+        </Link>
       </div>
 
       {/* nav menu for smaller devices */}
