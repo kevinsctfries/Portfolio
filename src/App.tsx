@@ -17,6 +17,7 @@ function App() {
       <Background />
       <NavBar />
 
+      {/* allows router to work without messing up Background component */}
       {isBlog ? (
         <Blog />
       ) : (
