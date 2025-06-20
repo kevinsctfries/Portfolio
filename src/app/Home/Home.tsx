@@ -1,11 +1,10 @@
 import "./home.scss";
-import portrait from "../../assets/Portrait.jpg";
 
 const HomePage = () => {
   return (
     <div className="homepage">
       <div className="portrait-wrapper">
-        <img src={portrait} alt="" className="portrait" />
+        <img src="/Portrait.jpg" alt="" className="portrait" />
       </div>
       <div>
         <p>

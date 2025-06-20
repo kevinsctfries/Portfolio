@@ -1,16 +1,19 @@
-import "./App.scss";
-import NavBar from "./components/navbar/NavBar";
-import HomePage from "./features/Home/Home";
-import ProjectsPage from "./features/Projects/Projects";
-import ContactPage from "./features/Contact/Contact";
-import SkillsPage from "./features/Skills/Skills";
-import Background from "./components/background/Background";
-import Blog from "./pages/BlogPage/Blog";
-import { useLocation } from "react-router-dom";
+"use client";
 
-function App() {
-  const location = useLocation();
-  const isBlog = location.pathname === "/blog";
+import "../styles/app.scss";
+import "../styles/globals.scss";
+import NavBar from "../components/navbar/NavBar";
+import HomePage from "./Home/Home";
+import ProjectsPage from "./Projects/Projects";
+import ContactPage from "./Contact/Contact";
+import SkillsPage from "./Skills/Skills";
+import Background from "../components/background/Background";
+import Blog from "./blog/page";
+import { usePathname } from "next/navigation";
+
+const Home = () => {
+  const pathname = usePathname();
+  const isBlog = pathname === "/blog";
 
   return (
     <div className="app">
@@ -38,6 +41,6 @@ function App() {
       )}
     </div>
   );
-}
+};
 
-export default App;
+export default Home;

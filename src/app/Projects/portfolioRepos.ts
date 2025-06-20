@@ -1,8 +1,4 @@
-import logo from "../../assets/logo.jpeg";
-import ohnotation from "../../assets/ohnotation.png";
-import unet from "../../assets/unet.png";
-import chooseOptionHelper from "../../assets/chooseoptionhelper.png";
-import flashy from "../../assets/flashy.png";
+
 
 export interface PortfolioRepo {
   name: string;
@@ -14,31 +10,31 @@ export const portfolioRepos: PortfolioRepo[] = [
   {
     name: "kevinsctfries.github.io",
     desc: "My portfolio site!",
-    image: logo,
+    image: "/logo.jpeg",
   },
   {
     name: "ohnotation",
     desc: "A learning resource for understanding time and space complexity",
-    image: ohnotation,
+    image: "/ohnotation.png",
   },
   {
     name: "UNet",
     desc: "Reddit-like social platform made from scratch!",
-    image: unet,
+    image: "/unet.png",
   },
   {
     name: "ytt-gen",
     desc: "A tool to convert .ASS subtitles to .YTT format",
-    image: logo,
+    image: "/logo.jpeg",
   },
   {
     name: "choose-option-helper",
     desc: "A replication of the right-click menu in OSRS",
-    image: chooseOptionHelper,
+    image: "/chooseoptionhelper.png",
   },
   {
     name: "flashy",
     desc: "Locally ran AI powered flashcard generator",
-    image: flashy,
+    image: "/flashy.png",
   },
 ];
