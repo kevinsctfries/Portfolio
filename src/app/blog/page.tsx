@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { type SanityDocument } from "next-sanity";
 import { client } from "./client";
+import "./blog.scss";
+import "../../styles/globals.scss";
+import Background from "../../components/background/Background";
 
 export const revalidate = 30;
 
@@ -13,13 +16,18 @@ export default async function IndexPage() {
   const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY);
 
   return (
-    <main className="">
-      <h1 className="">Posts</h1>
-      <ul className="">
+    <main>
+      <Background />
+      <header>
+        <Link href="/" className="button">
+          Home
+        </Link>
+      </header>
+      <ul>
         {posts.map(post => (
-          <li className="" key={post._id}>
+          <li key={post._id}>
             <Link href={`/blog/${post.slug.current}`}>
-              <h2 className="">{post.title}</h2>
+              <h2>{post.title}</h2>
               <p>{new Date(post.publishedAt).toLocaleDateString()}</p>
             </Link>
           </li>
