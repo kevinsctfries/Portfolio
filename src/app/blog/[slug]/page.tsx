@@ -1,53 +1,40 @@
-import {
-  PortableText,
-  type PortableTextComponents,
-  type SanityDocument,
-} from "next-sanity";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { gruvboxDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import imageUrlBuilder from "@sanity/image-url";
-import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
-import Link from "next/link";
+import path from "path";
+import { readFile, access, readdir } from "fs/promises";
 import { notFound } from "next/navigation";
+import PostClient from "./PostClient.tsx";
 
-import { client } from "../client";
-import Background from "../../../components/background/Background";
-import "./page.scss";
+const POSTS_FOLDER = path.join(process.cwd(), "src", "blog-posts");
 
-export const revalidate = 30;
+async function readPostFile(slug: string) {
+  const file = path.join(POSTS_FOLDER, `${slug}.mdx`);
+  try {
+    await access(file);
+    return readFile(file, "utf8");
+  } catch {
+    return null;
+  }
+}
 
-const POST_QUERY = `*[_type == "post" && slug.current == $slug][0]`;
+export async function generateStaticParams() {
+  const files = await readdir(POSTS_FOLDER);
+  return files
+    .filter(f => f.endsWith(".mdx"))
+    .map(f => ({ slug: f.replace(/\.mdx$/, "") }));
+}
 
-const { projectId, dataset } = client.config();
-
-const urlFor = (source: SanityImageSource) =>
-  projectId && dataset
-    ? imageUrlBuilder({ projectId, dataset }).image(source)
-    : null;
-
-const portableComponents: PortableTextComponents = {
-  types: {
-    image: ({ value }) => {
-      const imageUrl = urlFor(value)?.width(800).fit("max").url();
-      return <img src={imageUrl ?? ""} alt={value.alt || "Post image"} />;
-    },
-    code: ({ value }) => {
-      return (
-        <div className="code-block">
-          <SyntaxHighlighter
-            language={value.language}
-            style={gruvboxDark}
-            showLineNumbers>
-            {value.code}
-          </SyntaxHighlighter>
-        </div>
-      );
-    },
-  },
-  marks: {
-    code: ({ children }) => <code>{children}</code>,
-  },
-};
+function stripFrontmatter(markdown: string) {
+  const m = markdown.match(/^---\n([\s\S]*?)\n---\n/);
+  if (!m) return { frontmatter: {}, content: markdown };
+  const fm: Record<string, string> = {};
+  m[1].split("\n").forEach(line => {
+    const [k, ...v] = line.split(":");
+    fm[k.trim()] = v.join(":").trim();
+  });
+  return {
+    frontmatter: fm,
+    content: markdown.slice(m[0].length),
+  };
+}
 
 export default async function PostPage({
   params,
@@ -56,39 +43,15 @@ export default async function PostPage({
 }) {
   const { slug } = await params;
 
-  const post = await client.fetch<SanityDocument>(POST_QUERY, {
-    slug,
-  });
+  const raw = await readPostFile(slug);
+  if (!raw) return notFound();
 
-  if (!post) {
-    notFound();
-  }
-
-  const postImageUrl = post.image
-    ? urlFor(post.image)?.width(550).height(310).url()
-    : null;
-
+  const { frontmatter, content } = stripFrontmatter(raw);
   return (
     <main>
-      <Background />
-      <header>
-        <Link href="/" className="button">
-          Home
-        </Link>
-        <Link href="/blog" className="button">
-          Back to posts
-        </Link>
-      </header>
-
-      {postImageUrl && <img src={postImageUrl} alt={post.title} />}
-
-      <div className="post-body">
-        <h1>{post.title}</h1>
-        <p>Posted: {new Date(post.publishedAt).toLocaleDateString()}</p>
-        {Array.isArray(post.body) && (
-          <PortableText value={post.body} components={portableComponents} />
-        )}
-      </div>
+      <h1>{frontmatter.title}</h1>
+      <p>{new Date(frontmatter.publishedAt!).toLocaleDateString()}</p>
+      <PostClient markdown={content} />
     </main>
   );
 }

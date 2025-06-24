@@ -1,32 +1,57 @@
+import fs from "fs";
+import path from "path";
 import Link from "next/link";
-import { type SanityDocument } from "next-sanity";
-import { client } from "./client";
-import "./blog.scss";
-import "../../styles/globals.scss";
-import Background from "../../components/background/Background";
 
-export const revalidate = 30;
+function parseFrontmatter(fileContents: string) {
+  const match = fileContents.match(/^---\n([\s\S]*?)\n---\n/);
+  if (!match) return { frontmatter: {}, content: fileContents };
 
-const POSTS_QUERY = `*[
-  _type == "post"
-  && defined(slug.current)
-]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt}`;
+  const frontmatterBlock = match[1];
+  const content = fileContents.slice(match[0].length);
 
-export default async function IndexPage() {
-  const posts = await client.fetch<SanityDocument[]>(POSTS_QUERY);
+  const frontmatter: Record<string, string> = {};
+  for (const line of frontmatterBlock.split("\n")) {
+    const [key, ...rest] = line.split(":");
+    if (key && rest.length > 0) {
+      frontmatter[key.trim()] = rest.join(":").trim();
+    }
+  }
+
+  return { frontmatter, content };
+}
+
+export default function BlogIndex() {
+  const postsDir = path.join(process.cwd(), "src", "blog-posts");
+
+  const posts = fs
+    .readdirSync(postsDir)
+    .filter(file => file.endsWith(".mdx"))
+    .map(filename => {
+      const slug = filename.replace(/\.mdx$/, "");
+      const fileContents = fs.readFileSync(
+        path.join(postsDir, filename),
+        "utf8"
+      );
+      const { frontmatter } = parseFrontmatter(fileContents);
+
+      return {
+        slug,
+        title: frontmatter.title || "Untitled",
+        publishedAt: frontmatter.publishedAt || new Date().toISOString(),
+      };
+    })
+    .sort(
+      (a, b) =>
+        new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+    );
 
   return (
     <main>
-      <Background />
-      <header>
-        <Link href="/" className="button">
-          Home
-        </Link>
-      </header>
+      <h1>My Blog</h1>
       <ul>
         {posts.map(post => (
-          <li key={post._id}>
-            <Link href={`/blog/${post.slug.current}`}>
+          <li key={post.slug}>
+            <Link href={`/blog/${post.slug}`}>
               <h2>{post.title}</h2>
               <p>{new Date(post.publishedAt).toLocaleDateString()}</p>
             </Link>
