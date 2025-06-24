@@ -3,6 +3,7 @@ import { readFile, access, readdir } from "fs/promises";
 import { notFound } from "next/navigation";
 import PostClient from "./PostClient.tsx";
 import Link from "next/link";
+import styles from "./page.module.scss"; // ✅ use module
 
 const POSTS_FOLDER = path.join(process.cwd(), "src", "blog-posts");
 
@@ -48,19 +49,28 @@ export default async function PostPage({
   if (!raw) return notFound();
 
   const { frontmatter, content } = stripFrontmatter(raw);
+
   return (
-    <main>
-      <header>
-        <Link href="/" className="button">
-          Home
-        </Link>
-        <Link href="/blog" className="button">
-          Back to Posts
-        </Link>
-      </header>
-      <h2>{frontmatter.title}</h2>
-      <span>{new Date(frontmatter.publishedAt!).toLocaleDateString()}</span>
-      <PostClient markdown={content} />
-    </main>
+    <div className={styles.container}>
+      <main>
+        <header>
+          <Link href="/" className="button">
+            Home
+          </Link>
+          <Link href="/blog" className="button">
+            Back to Posts
+          </Link>
+        </header>
+        <div className={styles.post}>
+          <h1 className={styles.postTitle}>{frontmatter.title}</h1>
+          <span>
+            Published: {new Date(frontmatter.publishedAt!).toLocaleDateString()}
+          </span>
+          <div className={styles.postBody}>
+            <PostClient markdown={content} />
+          </div>
+        </div>
+      </main>
+    </div>
   );
 }
