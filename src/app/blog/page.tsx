@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
-import "./blog.scss";
+import styles from "./blog.module.scss";
 
 function parseFrontmatter(fileContents: string) {
   const match = fileContents.match(/^---\n([\s\S]*?)\n---\n/);
@@ -48,26 +48,28 @@ export default function BlogIndex() {
     );
 
   return (
-    <main>
-      <header>
-        <Link href="/" className="button">
-          Home
-        </Link>
-      </header>
-      <h1>My Blog</h1>
-      <ul>
-        {posts.map(post => (
-          <li key={post.slug}>
-            <Link href={`/blog/${post.slug}`}>
-              <h2>{post.title}</h2>
-              <span>
-                Published: {new Date(post.publishedAt).toLocaleDateString()}
-              </span>
-              <p>{post.desc}</p>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </main>
+    <div className={styles.container}>
+      <main>
+        <header>
+          <Link href="/" className="button">
+            Home
+          </Link>
+        </header>
+        <h1>My Blog</h1>
+        <ul>
+          {posts.map(post => (
+            <li key={post.slug} className={styles.postItem}>
+              <Link href={`/blog/${post.slug}`}>
+                <h2>{post.title}</h2>
+                <span>
+                  Published: {new Date(post.publishedAt).toLocaleDateString()}
+                </span>
+                <p>{post.desc}</p>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </main>
+    </div>
   );
 }
