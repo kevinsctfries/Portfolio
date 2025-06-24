@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./navbar.scss";
-import Link from 'next/link'
+import Link from "next/link";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);

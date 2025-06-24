@@ -2,6 +2,7 @@ import path from "path";
 import { readFile, access, readdir } from "fs/promises";
 import { notFound } from "next/navigation";
 import PostClient from "./PostClient.tsx";
+import Link from "next/link";
 
 const POSTS_FOLDER = path.join(process.cwd(), "src", "blog-posts");
 
@@ -49,8 +50,16 @@ export default async function PostPage({
   const { frontmatter, content } = stripFrontmatter(raw);
   return (
     <main>
-      <h1>{frontmatter.title}</h1>
-      <p>{new Date(frontmatter.publishedAt!).toLocaleDateString()}</p>
+      <header>
+        <Link href="/" className="button">
+          Home
+        </Link>
+        <Link href="/blog" className="button">
+          Back to Posts
+        </Link>
+      </header>
+      <h2>{frontmatter.title}</h2>
+      <span>{new Date(frontmatter.publishedAt!).toLocaleDateString()}</span>
       <PostClient markdown={content} />
     </main>
   );
