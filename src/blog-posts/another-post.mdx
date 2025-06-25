@@ -31,10 +31,82 @@ This file contains **headings**, _emphasis_, lists, code blocks, links, images, 
 
 ## 💻 Code Examples
 
-```js
-// JavaScript
-function greet(name) {
-  console.log(`Hello, ${name}!`);
+```json
+{
+  "name": "json-highlight-test",
+  "version": "1.0.0",
+  "description": "A simple JSON object to test syntax highlighting",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "next": "^15.3.4",
+    "react-syntax-highlighter": "^15.6.1"
+  },
+  "nested": {
+    "array": [
+      1,
+      2,
+      3,
+      {
+        "key": true,
+        "value": null
+      }
+    ]
+  }
 }
-greet("MDX");
 ```
+
+## Sample Table
+
+Here’s a simple table rendered in MDX:
+
+<table>
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Savings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>January</td>
+      <td>$250</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>$80</td>
+    </tr>
+    <tr>
+      <td>March</td>
+      <td>$420</td>
+    </tr>
+  </tbody>
+</table>
+
+### TODO: make tables render as html tables
+
+## BUTTON!
+
+<button
+  style={{
+    padding: "0.5rem 1rem",
+    backgroundColor: "#0070f3",
+    color: "white",
+    border: "none",
+    borderRadius: "4px",
+    cursor: "pointer",
+  }}
+  onClick={() => alert("MDX Button Clicked!")}>
+  Click Me!
+</button>
+
+## 📝 Blockquote Example
+
+> "The only way to do great work is to love what you do."  
+> — _Steve Jobs_
+
+Here’s some normal text below the quote.

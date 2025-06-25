@@ -3,7 +3,7 @@ import { readFile, access, readdir } from "fs/promises";
 import { notFound } from "next/navigation";
 import PostClient from "./PostClient.tsx";
 import Link from "next/link";
-import styles from "./page.module.scss"; // ✅ use module
+import styles from "./page.module.scss";
 
 const POSTS_FOLDER = path.join(process.cwd(), "src", "blog-posts");
 
@@ -63,7 +63,7 @@ export default async function PostPage({
         </header>
         <div className={styles.post}>
           <h1 className={styles.postTitle}>{frontmatter.title}</h1>
-          <span>
+          <span className={styles.published}>
             Published: {new Date(frontmatter.publishedAt!).toLocaleDateString()}
           </span>
           <div className={styles.postBody}>
