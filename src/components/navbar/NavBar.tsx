@@ -138,6 +138,9 @@ const NavBar = () => {
           <button className="button" onClick={() => scrollToSection("contact")}>
             Contact
           </button>
+          <Link href="/blog" className="button">
+            Blog
+          </Link>
         </div>
       </div>
 
