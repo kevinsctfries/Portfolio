@@ -46,12 +46,7 @@ export default function PostClient({ markdown }: { markdown: string }) {
           paddingRight: "1em",
           color: "var(--color-muted",
         }}
-        customStyle={{
-          borderRadius: "1rem",
-          padding: "1rem",
-          marginBottom: "1.5rem",
-          fontSize: "0.9rem",
-        }}
+        customStyle={{ paddingLeft: "1.5rem", paddingRight: "1rem" }}
         {...props}>
         {code}
       </SyntaxHighlighter>

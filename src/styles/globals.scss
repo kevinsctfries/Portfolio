@@ -48,6 +48,10 @@ body {
     background-color: var(--color-bg);
 }
 
+a {
+    color: inherit;
+}
+
 [class*="highlight-yellow"],
 [class*="highlight-blue"],
 [class*="highlight-pink"] {

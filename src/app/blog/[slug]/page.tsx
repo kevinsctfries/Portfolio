@@ -51,7 +51,7 @@ export default async function PostPage({
   const { frontmatter, content } = stripFrontmatter(raw);
 
   return (
-    <main>
+    <main className="blogPost">
       <header>
         <Link href="/" className="button">
           Home
