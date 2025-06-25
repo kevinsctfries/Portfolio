@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+    --color-accent-yellow: #f1ff00;
+    --color-accent-blue: #00f1ff;
+    --color-accent-pink: #ff00f1;
+
+    --color-bg: #ffffff;
+    --color-text: #121212;
+    --color-surface: #f9f9f9;
+
+    --color-muted: #777;
+
+    --font-family: "Inter", system-ui, sans-serif;
+
+    --font-size-small: clamp(0.75rem, 1.5vw, 0.875rem);
+    --font-size-base: clamp(0.875rem, 2vw, 1rem);
+    --font-size-large: clamp(1rem, 2.5vw, 1.25rem);
+    --font-size-xlarge: clamp(1.25rem, 3vw, 1.5rem);
+
+    --line-height-base: 1.5;
+
+    --h1-font-size: clamp(3rem, 5vw, 4.5rem);
+    --h2-font-size: clamp(2.25rem, 4vw, 3.5rem);
+    --h3-font-size: clamp(1.75rem, 3vw, 3rem);
+}
+
+main {
+    margin: 0 2rem;
+    padding: 1rem;
+    font-family: var(--font-family);
+    line-height: var(--line-height-base);
+
+    header {
+        display: flex;
+        margin-bottom: 2rem;
+        gap: 1rem;
+    }
+
+    .publishedDate {
+        display: flex;
+        justify-content: flex-end;
+        color: var(--color-muted);
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: var(--h1-font-size);
+        text-decoration: underline;
+        text-decoration-color: var(--color-accent-blue);
+        margin-bottom: 0.5rem;
+    }
+
+    h2 {
+        font-size: var(--h2-font-size);
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    h3 {
+        font-size: var(--h3-font-size);
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    p,
+    li,
+    strong,
+    em {
+        font-size: var(--font-size-large);
+        margin-bottom: 1rem;
+    }
+
+    ul,
+    ol {
+        padding-left: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    blockquote {
+        border-left: 4px solid var(--color-accent-blue);
+        padding-left: 1rem;
+        margin: 1.5rem 0;
+        font-style: italic;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 2rem 0;
+
+        th,
+        td {
+            border: 1px solid #444;
+            padding: 0.5rem 1rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #222;
+            color: #fff;
+        }
+
+        td {
+            background-color: #111;
+            color: #ddd;
+        }
+    }
+
+    pre,
+    code {
+        font-family: "Fira Code", monospace;
+    }
+
+    pre {
+        border-radius: 1rem;
+        overflow-x: auto;
+        margin: 2rem 0;
+    }
+
+    .codeBlock {
+        display: block;
+        overflow-x: auto;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+    }
+}

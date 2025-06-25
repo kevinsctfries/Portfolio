@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { compileMDX } from "next-mdx-remote/rsc";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import remarkGfm from "remark-gfm";
 
 const aliasMap: Record<string, string> = {
   js: "javascript",
@@ -62,6 +63,9 @@ export default function PostClient({ markdown }: { markdown: string }) {
       source: markdown,
       options: {
         parseFrontmatter: false,
+        mdxOptions: {
+          remarkPlugins: [remarkGfm],
+        },
       },
       components: {
         code: CodeBlock,
