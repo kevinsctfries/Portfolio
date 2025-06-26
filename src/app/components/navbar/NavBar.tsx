@@ -8,6 +8,7 @@ const sections = ["home", "skills", "projects", "contact"];
 
 const NavBar = () => {
   const [activeSection, setActiveSection] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,6 +33,15 @@ const NavBar = () => {
   return (
     <div className={styles.navbar}>
       <nav>
+        <button
+          className={styles.burger}
+          onClick={() => setMenuOpen(prev => !prev)}
+          aria-label="Toggle menu">
+          <span />
+          <span />
+          <span />
+        </button>
+
         <div className={styles.links}>
           {sections.map(id => (
             <a
@@ -59,6 +69,26 @@ const NavBar = () => {
         <Link className={styles.blog} href="/blog">
           Blog
         </Link>
+
+        <div
+          className={`${styles.sidebarOverlay} ${menuOpen ? styles.open : ""}`}
+          onClick={() => setMenuOpen(false)}
+        />
+
+        <div className={`${styles.sidebar} ${menuOpen ? styles.open : ""}`}>
+          {sections.map(id => (
+            <a
+              key={id}
+              href={`#${id}`}
+              className={activeSection === id ? styles.active : ""}
+              onClick={() => setMenuOpen(false)}>
+              {id.charAt(0).toUpperCase() + id.slice(1) + ".tsx"}
+            </a>
+          ))}
+          <Link className={styles.blog} href="/blog">
+            Blog
+          </Link>
+        </div>
       </nav>
     </div>
   );
