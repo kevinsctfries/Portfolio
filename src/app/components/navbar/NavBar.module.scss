@@ -1,0 +1,44 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--card-color-alt);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        div {
+            display: flex;
+            gap: 1.5rem;
+            a {
+                color: var(--text-color);
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 1rem;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

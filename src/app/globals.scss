@@ -1,0 +1,51 @@
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings:
+    "liga" 1,
+    "calt" 1;
+
+  --background-color: #000000;
+  --card-color: #161618;
+  --card-color-alt: #212124;
+
+  --text-color: #ffffff;
+  --text-color-alt: #818181;
+
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.2vw, 0.85rem);
+  --font-size-sm: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);
+  --font-size-base: clamp(1rem, 0.9rem + 0.4vw, 1.125rem);
+  --font-size-lg: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 1.25rem + 0.8vw, 2rem);
+  --font-size-3xl: clamp(2rem, 1.5rem + 1vw, 2.5rem);
+  --font-size-4xl: clamp(2.5rem, 2rem + 1.2vw, 3rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+}
+
+p {
+  font-size: var(--font-size-base);
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}

@@ -1,3 +1,4 @@
+import styles from "./SkillSection.module.scss";
 import {
   languageSkills,
   frontEndSkills,
@@ -13,29 +14,35 @@ type Skill = {
 const SkillSection = () => {
   const renderSkillCards = (skills: Skill[]) =>
     skills.map((skill, index) => (
-      <div className="skill-card" key={index}>
+      <div className={styles.skillCard} key={index}>
         <img src={skill.img} alt={skill.name} />
         <span>{skill.name}</span>
       </div>
     ));
 
   return (
-    <div className="skills-page section">
-      <div className="skills-category">
-        <h3 className="highlight-blue">Languages</h3>
-        <div className="skills-grid">{renderSkillCards(languageSkills)}</div>
+    <div className={styles.skills}>
+      <div className={styles.skillsCategory}>
+        <h3>Languages</h3>
+        <div className={styles.skillsGrid}>
+          {renderSkillCards(languageSkills)}
+        </div>
       </div>
-      <div className="skills-category">
-        <h3 className="highlight-blue">Front-end Skills</h3>
-        <div className="skills-grid">{renderSkillCards(frontEndSkills)}</div>
+      <div className={styles.skillsCategory}>
+        <h3>Front-end Skills</h3>
+        <div className={styles.skillsGrid}>
+          {renderSkillCards(frontEndSkills)}
+        </div>
       </div>
-      <div className="skills-category">
-        <h3 className="highlight-blue">Back-end Skills</h3>
-        <div className="skills-grid">{renderSkillCards(backEndSkills)}</div>
+      <div className={styles.skillsCategory}>
+        <h3>Back-end Skills</h3>
+        <div className={styles.skillsGrid}>
+          {renderSkillCards(backEndSkills)}
+        </div>
       </div>
-      <div className="skills-category">
-        <h3 className="highlight-blue">Other Skills</h3>
-        <div className="skills-grid">{renderSkillCards(otherSkills)}</div>
+      <div className={styles.skillsCategory}>
+        <h3>Other Skills</h3>
+        <div className={styles.skillsGrid}>{renderSkillCards(otherSkills)}</div>
       </div>
     </div>
   );

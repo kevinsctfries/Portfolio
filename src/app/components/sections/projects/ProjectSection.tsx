@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { portfolioRepos } from "@/app/data/portfolioRepos";
+import styles from "./ProjectSection.module.scss";
 
 interface Repo {
   id: number;
@@ -19,7 +20,6 @@ const ProjectSection = () => {
       .then(data => setProjects(data));
   }, []);
 
-  // GitHub API likes to return repos in alphabetical order, so this sorts them based on the order in portfolioRepos
   const filteredAndSortedProjects = projects
     .filter(repo => portfolioRepos.some(pr => pr.name === repo.name))
     .sort((a, b) => {
@@ -29,21 +29,22 @@ const ProjectSection = () => {
     });
 
   return (
-    <div className="projects-page">
-      <h2 className="highlight-yellow">My Projects</h2>
-      <div className="projects-grid">
+    <div className={styles.projects}>
+      <h2>My Projects</h2>
+      <div className={styles.projectsGrid}>
         {filteredAndSortedProjects.map(repo => {
           const portfolio = portfolioRepos.find(pr => pr.name === repo.name);
           return (
-            <div key={repo.id} className="project-card">
+            <div key={repo.id} className={styles.projectCard}>
               <h3>{repo.name}</h3>
               <p>{portfolio?.desc || repo.desc}</p>
               {portfolio?.image && (
-                <img src={portfolio.image} alt={repo.name} />
+                // <img src={portfolio.image} alt={repo.name} />
+                <img src="/logo.webp" alt={repo.name} />
               )}
-              <div className="project-links">
+              <div className={styles.projectLinks}>
                 <a
-                  className="button"
+                  className={styles.button}
                   href={repo.html_url}
                   target="_blank"
                   rel="noreferrer">
