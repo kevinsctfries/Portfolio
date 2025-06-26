@@ -3,21 +3,21 @@
     top: 0;
     z-index: 1000;
     background-color: var(--card-color-alt);
-
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     nav {
+        width: 100%;
         display: flex;
         align-items: stretch;
-        width: 100%;
 
         .links {
             display: flex;
 
             a {
-                padding: 1rem 2rem;
+                padding: 1rem 1.2rem;
                 color: var(--text-color);
                 font-size: 1rem;
                 text-decoration: none;
@@ -28,6 +28,14 @@
                 &:hover {
                     background-color: var(--background-color);
                 }
+
+                span {
+                    margin-left: 8px;
+                }
+            }
+
+            a:not(.active) {
+                color: var(--text-color-alt);
             }
 
             .active {
