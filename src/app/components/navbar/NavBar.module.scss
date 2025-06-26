@@ -3,8 +3,6 @@
     top: 0;
     z-index: 1000;
     background-color: var(--card-color-alt);
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
     display: flex;
     justify-content: space-between;
@@ -12,32 +10,51 @@
 
     nav {
         display: flex;
-        justify-content: space-between;
+        align-items: stretch;
         width: 100%;
 
-        div {
+        .links {
             display: flex;
-            gap: 1.5rem;
+
             a {
+                padding: 1rem 2rem;
                 color: var(--text-color);
-                text-decoration: none;
-                font-weight: 500;
                 font-size: 1rem;
+                text-decoration: none;
+                border-right: 2px solid var(--border-color);
+                border-top: 2px solid var(--border-color);
+                border-bottom: 2px solid var(--border-color);
 
                 &:hover {
-                    text-decoration: underline;
+                    background-color: var(--background-color);
                 }
+            }
+
+            .active {
+                border-top: 2px solid #f78166;
+                border-bottom: transparent;
+                background-color: var(--background-color);
             }
         }
 
-        a {
+        .spacer {
+            flex-grow: 1;
+            border-top: 2px solid var(--border-color);
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .blog {
+            padding: 1rem 2rem;
             color: var(--text-color);
             text-decoration: none;
             font-weight: 500;
             font-size: 1rem;
+            border-left: 2px solid var(--border-color);
+            border-top: 2px solid var(--border-color);
+            border-bottom: 2px solid var(--border-color);
 
             &:hover {
-                text-decoration: underline;
+                background-color: var(--background-color);
             }
         }
     }
