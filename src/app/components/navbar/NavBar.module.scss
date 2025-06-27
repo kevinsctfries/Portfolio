@@ -5,21 +5,16 @@
     background-color: var(--card-color-alt);
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    font-size: var(--font-size-lg);
 
     nav {
         width: 100%;
         display: flex;
-        align-items: stretch;
-        position: relative; // This enables absolute sidebar positioning
 
         .links {
-            display: flex;
-
             a {
                 padding: 1rem 1.2rem;
                 color: var(--text-color);
-                font-size: 1rem;
                 text-decoration: none;
                 border-right: 2px solid var(--border-color);
                 border-top: 2px solid var(--border-color);
@@ -56,7 +51,6 @@
             color: var(--text-color);
             text-decoration: none;
             font-weight: 500;
-            font-size: 1rem;
             border-left: 2px solid var(--border-color);
             border-top: 2px solid var(--border-color);
             border-bottom: 2px solid var(--border-color);
@@ -66,41 +60,38 @@
             }
         }
 
+        .burger {
+            display: none;
+            background: none;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            color: var(--text-color);
+            margin: 0;
+
+            svg {
+                width: 1.75rem;
+                height: 1.75rem;
+            }
+        }
+
         .sidebar {
             display: none;
         }
-
-        .burger {
-            display: none;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 1.5rem;
-            height: 1.25rem;
-            background: none;
-            border: none;
-            cursor: pointer;
-            margin: 1rem;
-
-            span {
-                height: 2px;
-                width: 100%;
-                background-color: var(--text-color);
-                border-radius: 1px;
-            }
-        }
     }
+
     .sidebarOverlay {
         display: none;
-    }
 
-    .sidebarOverlay.open {
-        display: block;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        z-index: 999;
+        &.open {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 999;
+        }
     }
 }
 
@@ -108,6 +99,7 @@
     .navbar {
         nav {
             border-bottom: 1px solid var(--border-color);
+
             .links,
             .spacer,
             .blog {
@@ -134,31 +126,71 @@
             }
 
             .sidebar {
+                padding-top: 1rem;
                 display: flex;
                 flex-direction: column;
                 position: absolute;
                 top: 100%;
-                left: -40%;
-                width: 40%;
+                left: -50%;
+                width: 50%;
                 height: 100vh;
                 background-color: var(--card-color-alt);
-                border-right: none;
                 transition: left 0.3s ease;
                 z-index: 1001;
-
-                a {
-                    padding: 1rem;
-                    text-decoration: none;
-                    color: var(--text-color);
-
-                    &.active {
-                        background-color: #2d3138;
-                    }
-                }
 
                 &.open {
                     left: 0;
                     border-right: 1px solid var(--border-color);
+                }
+
+                .sections,
+                .pages {
+                    padding: 0 1rem;
+
+                    > div {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        padding: 0.75rem 0;
+
+                        svg {
+                            width: 1.25rem;
+                            height: 1.25rem;
+                            flex-shrink: 0;
+                        }
+
+                        span {
+                            font-weight: bold;
+                            font-size: 1rem;
+                        }
+                    }
+
+                    a {
+                        display: block;
+                        border-left: 1px solid var(--border-color);
+                        margin-left: 0.5rem;
+                        padding: 1rem;
+                        text-decoration: none;
+                        color: var(--text-color);
+
+                        &.active {
+                            background-color: #2d3138;
+                        }
+                    }
+
+                    .blog {
+                        display: block;
+                        border: none;
+                        border-left: 1px solid var(--border-color);
+                        margin-left: 0.5rem;
+                        padding: 1rem;
+                        text-decoration: none;
+                        color: var(--text-color);
+
+                        &:hover {
+                            background-color: var(--background-color);
+                        }
+                    }
                 }
             }
         }

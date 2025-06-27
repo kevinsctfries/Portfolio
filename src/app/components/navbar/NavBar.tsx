@@ -37,9 +37,15 @@ const NavBar = () => {
           className={styles.burger}
           onClick={() => setMenuOpen(prev => !prev)}
           aria-label="Toggle menu">
-          <span />
-          <span />
-          <span />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 72 72"
+            width="24"
+            height="24"
+            fill="currentColor"
+            aria-hidden="true">
+            <path d="M56 48c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 48 54.798 48 56 48zM56 32c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 32 54.798 32 56 32zM56 16c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 16 54.798 16 56 16z" />
+          </svg>
         </button>
 
         <div className={styles.links}>
@@ -76,18 +82,50 @@ const NavBar = () => {
         />
 
         <div className={`${styles.sidebar} ${menuOpen ? styles.open : ""}`}>
-          {sections.map(id => (
-            <a
-              key={id}
-              href={`#${id}`}
-              className={activeSection === id ? styles.active : ""}
-              onClick={() => setMenuOpen(false)}>
-              {id.charAt(0).toUpperCase() + id.slice(1) + ".tsx"}
-            </a>
-          ))}
-          <Link className={styles.blog} href="/blog">
-            Blog
-          </Link>
+          <div className={styles.sections}>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className={styles.chevronIcon}>
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+              <span>Sections</span>
+            </div>
+            {sections.map(id => (
+              <a
+                key={id}
+                href={`#${id}`}
+                className={activeSection === id ? styles.active : ""}
+                onClick={() => setMenuOpen(false)}>
+                {id.charAt(0).toUpperCase() + id.slice(1) + ".tsx"}
+              </a>
+            ))}
+          </div>
+          <div className={styles.pages}>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className={styles.chevronIcon}>
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+              <span>Pages</span>
+            </div>
+            <Link className={styles.blog} href="/blog">
+              Blog
+            </Link>
+          </div>
         </div>
       </nav>
     </div>
