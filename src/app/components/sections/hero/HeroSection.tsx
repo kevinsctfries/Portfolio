@@ -1,27 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Typewriter from "typewriter-effect";
 import styles from "./HeroSection.module.scss";
 
-const headerText = "Hello, my name is Kevin";
-
 const HeroSection = () => {
-  const [headerDisplayed, setHeaderDisplayed] = useState("");
-
-  useEffect(() => {
-    let headerIndex = 0;
-
-    const typeHeader = () => {
-      if (headerIndex <= headerText.length) {
-        setHeaderDisplayed(headerText.slice(0, headerIndex));
-        headerIndex++;
-        setTimeout(typeHeader, 40);
-      }
-    };
-
-    typeHeader();
-  }, []);
-
   const scrollToSkills = () => {
     const target = document.getElementById("skills");
     if (target) {
@@ -31,35 +13,57 @@ const HeroSection = () => {
 
   return (
     <div className={styles.hero}>
-      <div className={styles.bracket}>
-        <span>&lt;</span>
-        <span className={styles.tag}>h1</span>
-        <span>&gt;</span>
+      <div>
+        <div className={styles.bracket}>
+          <span>&lt;</span>
+          <span className={styles.tag}>h1</span>
+          <span>&gt;</span>
+        </div>
+        <h1>
+          <Typewriter
+            options={{ loop: true, cursorClassName: "cursor" }}
+            onInit={typewriter => {
+              typewriter
+                .changeDelay(20)
+                .typeString("Hi, my name is Kevin,")
+                .pauseFor(1000)
+                .deleteAll(10)
+                .typeString("Welcome to my Portfolio.")
+                .pauseFor(1000)
+                .deleteAll(10)
+                .typeString("Check out my stuff below!")
+                .pauseFor(1000)
+                .deleteAll(10)
+                .start();
+            }}
+          />
+        </h1>
+        <div className={styles.bracket}>
+          <span>&lt;/</span>
+          <span className={styles.tag}>h1</span>
+          <span>&gt;</span>
+        </div>
       </div>
-      <h1>{headerDisplayed}</h1>
-      <div className={styles.bracket}>
-        <span>&lt;/</span>
-        <span className={styles.tag}>h1</span>
-        <span>&gt;</span>
+      <div>
+        <button
+          type="button"
+          aria-label="Scroll down"
+          title="Scroll Down"
+          className={styles.scrollButton}
+          onClick={scrollToSkills}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className={styles.chevronIcon}>
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
       </div>
-      <button
-        type="button"
-        aria-label="Scroll down"
-        title="Scroll Down"
-        className={styles.scrollButton}
-        onClick={scrollToSkills}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth={2}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className={styles.chevronIcon}>
-          <polyline points="6 9 12 15 18 9" />
-        </svg>
-      </button>
     </div>
   );
 };

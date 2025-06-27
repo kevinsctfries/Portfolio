@@ -1,41 +1,38 @@
 .hero {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  margin: 0 auto;
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
   height: 100vh;
-  padding: 0 4rem;
-  position: relative;
+  margin: 0 auto;
   overflow: hidden;
   font-weight: bold;
 
-  h1 {
-    font-size: var(--font-size-3xl);
-    margin: 0;
-    padding-left: 2rem;
-  }
+  > div:first-child {
+    display: flex;
+    flex-direction: row;
 
-  .bracket {
-    font-size: var(--font-size-3xl);
+    h1 {
+      font-size: var(--font-size-4xl);
+      margin: 0;
+    }
 
-    align-self: flex-start;
-    .tag {
-      color: #7ee784;
-      margin: 0.5rem 0;
+    .bracket {
+      font-size: var(--font-size-4xl);
+
+      .tag {
+        color: #7ee784;
+      }
     }
   }
 
+  > div:last-child {
+    align-self: center;
+  }
+
   .scrollButton {
-    position: absolute;
-    bottom: 8rem; // adjust as needed
-    left: 50%;
-    transform: translateX(-50%); // centers the button horizontally
-
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
+    align-self: center;
     width: auto;
     background: none;
     border: 2px solid var(--text-color);
@@ -66,14 +63,32 @@
 
 @media screen and (max-width: 768px) {
   .hero {
-    padding: 0 2rem;
-    h1 {
-      font-size: var(--font-size-2xl);
-      padding-left: 2rem;
-    }
+    > div:first-child {
+      align-items: center;
+      flex-direction: column;
 
-    .bracket {
-      .tag {
+      .bracket {
+        font-size: var(--font-size-3xl);
+      }
+
+      h1 {
+        font-size: var(--font-size-3xl);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    > div:first-child {
+      align-items: center;
+      flex-direction: column;
+
+      .bracket {
+        font-size: var(--font-size-2xl);
+      }
+
+      h1 {
         font-size: var(--font-size-2xl);
       }
     }
