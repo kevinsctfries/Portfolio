@@ -5,15 +5,14 @@
         align-items: center;
 
         h3 {
-            font-size: clamp(1.25rem, 2.5vw, 2rem);
+            font-size: var(--font-size-3xl);
             margin-bottom: 1rem;
             padding: 4rem 0 2rem 0;
         }
 
         .skillsGrid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
-            justify-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1.5rem;
             max-width: 90%;
             -webkit-user-select: none;
@@ -30,6 +29,7 @@
         height: 150px;
         margin: 0 auto;
         background-color: var(--card-color);
+        border: 2px solid var(--border-color);
         border-radius: 1rem;
         text-align: center;
         transition: transform 0.2s ease;
@@ -48,6 +48,18 @@
 
         &:hover {
             transform: scale(1.05);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .skills {
+        .skillsCategory {
+            .skillsGrid {
+                grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+                gap: 0.5rem;
+                max-width: 100%;
+            }
         }
     }
 }
