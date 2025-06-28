@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { portfolioRepos } from "@/app/data/portfolioRepos";
 import styles from "./ProjectSection.module.scss";
 
@@ -39,8 +40,17 @@ const ProjectSection = () => {
               <h3>{repo.name}</h3>
               <p>{portfolio?.desc || repo.desc}</p>
               {portfolio?.image && (
-                // <img src={portfolio.image} alt={repo.name} />
-                <img src="/logo.webp" alt={repo.name} />
+                <Image
+                  src={portfolio.image}
+                  alt={repo.name}
+                  width={640}
+                  height={360}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    borderRadius: "0.5rem",
+                  }}
+                />
               )}
               <div className={styles.projectLinks}>
                 <a
