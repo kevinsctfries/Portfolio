@@ -59,6 +59,14 @@
       stroke-width: 2;
     }
   }
+
+  .staticText {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
