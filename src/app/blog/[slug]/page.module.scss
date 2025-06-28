@@ -1,12 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
-
-:global(.codeBlock),
-:global(.codeBlock pre) {
-    font-family: "Fira Code";
-    font-size: 1rem;
-    background-color: #282c34; /* same dark background as atomOneDark */
-}
-
 .postContainer {
     :global(.btn-outline) {
         width: 80px;
