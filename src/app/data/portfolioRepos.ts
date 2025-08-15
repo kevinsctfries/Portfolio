@@ -10,4 +10,9 @@ export const portfolioRepos: PortfolioRepo[] = [
     desc: "A tool to convert .ASS subtitles to .YTT format",
     image: "/logo.webp",
   },
+  {
+    name: "day-trader",
+    desc: "A fun game I made to simulate the fluctuating prices of stocks aaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa",
+    image: "/logo.webp",
+  },
 ];

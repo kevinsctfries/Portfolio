@@ -1,5 +1,10 @@
 .projects {
     padding: 0 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
 
     h2 {
         font-size: var(--font-size-3xl);
@@ -9,14 +14,20 @@
     }
 
     .projectsGrid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        justify-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 2rem;
-        margin-inline: auto;
         width: 100%;
+        max-width: 1200px;
+        padding: 1rem;
+        box-sizing: border-box;
 
         .projectCard {
+            width: 320px;
+            max-width: 100%;
+            box-sizing: border-box;
+
             background-color: var(--card-color);
             padding: 1.5rem;
             border-radius: 1rem;
@@ -76,6 +87,16 @@
 
 @media screen and (max-width: 768px) {
     .projects {
-        overflow-x: hidden;
+        padding: 0 1rem;
+    }
+
+    .projectsGrid {
+        justify-content: center;
+        gap: 1.25rem;
+
+        .projectCard {
+            width: 100%;
+            max-width: 560px;
+        }
     }
 }
