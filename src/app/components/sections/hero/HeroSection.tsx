@@ -19,6 +19,9 @@ const HeroSection = () => {
           <span className={styles.tag}>h1</span>
           <span>&gt;</span>
         </div>
+        <h1 aria-hidden="true" className={styles.staticText}>
+          Hi, my name is Kevin,
+        </h1>
         <h1>
           <Typewriter
             options={{ loop: true, cursorClassName: "cursor" }}
