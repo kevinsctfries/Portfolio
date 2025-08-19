@@ -61,7 +61,7 @@ const ProjectSection = () => {
                   View on GitHub
                 </a>
 
-                {portfolio?.link && portfolio.link.trim() !== "" && (
+                {portfolio?.link && (
                   <a
                     className={styles.button}
                     href={
