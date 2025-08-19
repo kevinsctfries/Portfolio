@@ -60,6 +60,20 @@ const ProjectSection = () => {
                   rel="noreferrer">
                   View on GitHub
                 </a>
+
+                {portfolio?.link && (
+                  <a
+                    className={styles.button}
+                    href={
+                      portfolio.link.startsWith("http")
+                        ? portfolio.link
+                        : `https://${portfolio.link}`
+                    }
+                    target="_blank"
+                    rel="noreferrer">
+                    Visit Project
+                  </a>
+                )}
               </div>
             </div>
           );
