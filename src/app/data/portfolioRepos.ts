@@ -12,7 +12,7 @@ export const portfolioRepos: PortfolioRepo[] = [
   },
   {
     name: "day-trader",
-    desc: "A fun game I made to simulate the fluctuating prices of stocks aaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa",
+    desc: "A fun game I made to simulate the fluctuating prices of stocks",
     image: "/logo.webp",
   },
 ];
