@@ -7,16 +7,22 @@ export interface PortfolioRepo {
 
 export const portfolioRepos: PortfolioRepo[] = [
   {
-    name: "ytt-gen",
-    desc: "A tool to convert .ASS subtitles to .YTT format",
-    image: "/logo.webp",
-    link: "",
-  },
-  {
     name: "day-trader",
     desc: "A fun game I made to simulate the fluctuating prices of stocks",
     image: "/daytrader.webp",
     link: "daytrader.kevinsctfries.com",
+  },
+  {
+    name: "FingerTapJS",
+    desc: "A browser-based finger tapping test built with JavaScript and MediaPipe",
+    image: "/fingertapjs.webp",
+    link: "fingertapjs.kevinsctfries.com",
+  },
+  {
+    name: "ytt-gen",
+    desc: "A tool to convert .ASS subtitles to .YTT format",
+    image: "/logo.webp",
+    link: "",
   },
   {
     name: "choose-option-helper",
