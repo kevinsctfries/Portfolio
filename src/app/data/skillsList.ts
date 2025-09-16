@@ -16,6 +16,10 @@ export const languageSkills: Skill[] = [
     name: "Python",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
   },
+  {
+    name: "C#",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
+  },
 ];
 
 export const frontEndSkills: Skill[] = [
@@ -86,6 +90,10 @@ export const backEndSkills: Skill[] = [
   {
     name: "Docker",
     img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+  },
+  {
+    name: ".NET",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg",
   },
 ];
 
