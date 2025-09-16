@@ -71,7 +71,7 @@ const ProjectSection = () => {
                     }
                     target="_blank"
                     rel="noreferrer">
-                    Visit Project
+                    Visit Demo
                   </a>
                 )}
               </div>
